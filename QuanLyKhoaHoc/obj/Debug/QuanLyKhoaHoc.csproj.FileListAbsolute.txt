@@ -1,0 +1,13 @@
+E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\QuanLyKhoaHoc.exe.config
+E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\QuanLyKhoaHoc.exe
+E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\QuanLyKhoaHoc.pdb
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.csproj.AssemblyReference.cache
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.csproj.SuggestedBindingRedirects.cache
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.Properties.Resources.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.csproj.GenerateResource.cache
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.csproj.CoreCompileInputs.cache
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.exe
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.pdb
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.fChucNang.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.fDangNhap.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.fXemToanBoHoiNghiKhoaHoc.resources
