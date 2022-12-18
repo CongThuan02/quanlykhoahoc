@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo;
+using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,6 +29,15 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc
             fChucNang _chucNang = new fChucNang();
             this.Hide();
             _chucNang.ShowDialog();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void fXemToanBoHoiNghiKhoaHoc_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

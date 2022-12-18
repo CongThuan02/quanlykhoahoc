@@ -1,4 +1,6 @@
 ﻿using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc;
+using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo;
+using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +46,20 @@ namespace QuanLyKhoaHoc
             fXemToanBoHoiNghiKhoaHoc _toanBoHoiNghiKhoaHoc = new fXemToanBoHoiNghiKhoaHoc();
             this.Hide();
             _toanBoHoiNghiKhoaHoc.ShowDialog();
-        } 
+        }
+
+        private void btnQuanLyHoiNghiCanBo_Click(object sender, EventArgs e)
+        {
+            fThemBaiBaoCanBo _hienthi= new fThemBaiBaoCanBo();
+            this.Hide();
+            _hienthi.ShowDialog();
+        }
+
+        private void btnQuanLyHoiNGhiSinhVien_Click(object sender, EventArgs e)
+        {
+            fThemBaiBaoChoSinhVien _them = new fThemBaiBaoChoSinhVien();
+            this.Hide();
+            _them.ShowDialog();
+        }
     }
 }

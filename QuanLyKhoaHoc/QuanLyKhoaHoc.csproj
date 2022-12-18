@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaiBaoHoiNghiKhoaHoc\CanBo\fThemBaiBaoCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaiBaoHoiNghiKhoaHoc\CanBo\fThemBaiBaoCanBo.Designer.cs">
+      <DependentUpon>fThemBaiBaoCanBo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaiBaoHoiNghiKhoaHoc\fXemToanBoHoiNghiKhoaHoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaiBaoHoiNghiKhoaHoc\fXemToanBoHoiNghiKhoaHoc.Designer.cs">
       <DependentUpon>fXemToanBoHoiNghiKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaiBaoHoiNghiKhoaHoc\SinhVien\fThemBaiBaoChoSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaiBaoHoiNghiKhoaHoc\SinhVien\fThemBaiBaoChoSinhVien.Designer.cs">
+      <DependentUpon>fThemBaiBaoChoSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="fChucNang.cs">
       <SubType>Form</SubType>
@@ -66,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaiBaoHoiNghiKhoaHoc\CanBo\fThemBaiBaoCanBo.resx">
+      <DependentUpon>fThemBaiBaoCanBo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaiBaoHoiNghiKhoaHoc\fXemToanBoHoiNghiKhoaHoc.resx">
       <DependentUpon>fXemToanBoHoiNghiKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,9 +113,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaiBaoTrenTapChi\" />
-    <Folder Include="QuanLyDoAnTotNghiep\" />
-    <Folder Include="QuanLyNhienCuuKhoaHoc\" />
+    <Folder Include="BaiBaoTrenTapChi\CanBo\" />
+    <Folder Include="BaiBaoTrenTapChi\SinhVien\" />
+    <Folder Include="QuanLyDoAnTotNghiep\CanBo\" />
+    <Folder Include="QuanLyDoAnTotNghiep\SinhVien\" />
+    <Folder Include="QuanLyNhienCuuKhoaHoc\CanBo\" />
+    <Folder Include="QuanLyNhienCuuKhoaHoc\SinhVien\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

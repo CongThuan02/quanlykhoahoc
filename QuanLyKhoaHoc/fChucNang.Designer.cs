@@ -30,25 +30,25 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuThoatChuongTrinh = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnQuanLyHoiNGhiSinhVien = new System.Windows.Forms.Button();
+            this.btnQuanLyHoiNghiCanBo = new System.Windows.Forms.Button();
             this.btnXemBaiBaoKhoaHoc = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTapChiSinhVien = new System.Windows.Forms.Button();
+            this.btnXemToanBoTapChi = new System.Windows.Forms.Button();
+            this.btnTapChiGiaoVien = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnDanhSachSinhVienThamGiaNhienCuu = new System.Windows.Forms.Button();
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien = new System.Windows.Forms.Button();
+            this.btnDeTaiNhienCuuKhoaHoc = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnDanhSachSinhVienBaoVe = new System.Windows.Forms.Button();
+            this.btnDanhSachGiangVienHuongDan = new System.Windows.Forms.Button();
+            this.btnXemDanhSachDoAnTotNghiep = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -75,10 +75,24 @@
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
+            // menuDangXuat
+            // 
+            this.menuDangXuat.Name = "menuDangXuat";
+            this.menuDangXuat.Size = new System.Drawing.Size(176, 22);
+            this.menuDangXuat.Text = "Đăng xuất";
+            this.menuDangXuat.Click += new System.EventHandler(this.menuDangXuat_Click);
+            // 
+            // menuThoatChuongTrinh
+            // 
+            this.menuThoatChuongTrinh.Name = "menuThoatChuongTrinh";
+            this.menuThoatChuongTrinh.Size = new System.Drawing.Size(176, 22);
+            this.menuThoatChuongTrinh.Text = "Thoát chương trình";
+            this.menuThoatChuongTrinh.Click += new System.EventHandler(this.menuThoatChuongTrinh_Click);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnQuanLyHoiNGhiSinhVien);
+            this.groupBox1.Controls.Add(this.btnQuanLyHoiNghiCanBo);
             this.groupBox1.Controls.Add(this.btnXemBaiBaoKhoaHoc);
             this.groupBox1.Location = new System.Drawing.Point(13, 101);
             this.groupBox1.Name = "groupBox1";
@@ -87,65 +101,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bài Báo tại hội nghị khoa học";
             // 
-            // groupBox2
+            // btnQuanLyHoiNGhiSinhVien
             // 
-            this.groupBox2.Controls.Add(this.button9);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Location = new System.Drawing.Point(410, 101);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(378, 160);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Các bài báo đăng trên tạp chí";
+            this.btnQuanLyHoiNGhiSinhVien.Location = new System.Drawing.Point(193, 89);
+            this.btnQuanLyHoiNGhiSinhVien.Name = "btnQuanLyHoiNGhiSinhVien";
+            this.btnQuanLyHoiNGhiSinhVien.Size = new System.Drawing.Size(175, 65);
+            this.btnQuanLyHoiNGhiSinhVien.TabIndex = 1;
+            this.btnQuanLyHoiNGhiSinhVien.Text = "Quản lý bài báo thuộc về sinh viên";
+            this.btnQuanLyHoiNGhiSinhVien.UseVisualStyleBackColor = true;
+            this.btnQuanLyHoiNGhiSinhVien.Click += new System.EventHandler(this.btnQuanLyHoiNGhiSinhVien_Click);
             // 
-            // groupBox3
+            // btnQuanLyHoiNghiCanBo
             // 
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Location = new System.Drawing.Point(13, 278);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(373, 160);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Quản lý đề tài nhiên cứu khoa học";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.button12);
-            this.groupBox4.Controls.Add(this.button10);
-            this.groupBox4.Controls.Add(this.button11);
-            this.groupBox4.Location = new System.Drawing.Point(410, 278);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(378, 160);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Quản lý đồ án tốt nghiệp";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(283, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 33);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Trang Quản Trị";
-            // 
-            // menuDangXuat
-            // 
-            this.menuDangXuat.Name = "menuDangXuat";
-            this.menuDangXuat.Size = new System.Drawing.Size(180, 22);
-            this.menuDangXuat.Text = "Đăng xuất";
-            this.menuDangXuat.Click += new System.EventHandler(this.menuDangXuat_Click);
-            // 
-            // menuThoatChuongTrinh
-            // 
-            this.menuThoatChuongTrinh.Name = "menuThoatChuongTrinh";
-            this.menuThoatChuongTrinh.Size = new System.Drawing.Size(180, 22);
-            this.menuThoatChuongTrinh.Text = "Thoát chương trình";
-            this.menuThoatChuongTrinh.Click += new System.EventHandler(this.menuThoatChuongTrinh_Click);
+            this.btnQuanLyHoiNghiCanBo.Location = new System.Drawing.Point(7, 89);
+            this.btnQuanLyHoiNghiCanBo.Name = "btnQuanLyHoiNghiCanBo";
+            this.btnQuanLyHoiNghiCanBo.Size = new System.Drawing.Size(175, 65);
+            this.btnQuanLyHoiNghiCanBo.TabIndex = 1;
+            this.btnQuanLyHoiNghiCanBo.Text = "Quản lý bài báo thuộc về cán bộ, giảng viên";
+            this.btnQuanLyHoiNghiCanBo.UseVisualStyleBackColor = true;
+            this.btnQuanLyHoiNghiCanBo.Click += new System.EventHandler(this.btnQuanLyHoiNghiCanBo_Click);
             // 
             // btnXemBaiBaoKhoaHoc
             // 
@@ -157,104 +131,132 @@
             this.btnXemBaiBaoKhoaHoc.UseVisualStyleBackColor = true;
             this.btnXemBaiBaoKhoaHoc.Click += new System.EventHandler(this.btnXemBaiBaoKhoaHoc_Click);
             // 
-            // button2
+            // groupBox2
             // 
-            this.button2.Location = new System.Drawing.Point(7, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 65);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Các bài báo thuộc về cán bộ, giảng viên";
-            this.button2.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.btnTapChiSinhVien);
+            this.groupBox2.Controls.Add(this.btnXemToanBoTapChi);
+            this.groupBox2.Controls.Add(this.btnTapChiGiaoVien);
+            this.groupBox2.Location = new System.Drawing.Point(410, 101);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(378, 160);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Các bài báo đăng trên tạp chí";
             // 
-            // button3
+            // btnTapChiSinhVien
             // 
-            this.button3.Location = new System.Drawing.Point(193, 89);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 65);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Các bài báo thuộc về sinh viên";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTapChiSinhVien.Location = new System.Drawing.Point(194, 87);
+            this.btnTapChiSinhVien.Name = "btnTapChiSinhVien";
+            this.btnTapChiSinhVien.Size = new System.Drawing.Size(175, 65);
+            this.btnTapChiSinhVien.TabIndex = 1;
+            this.btnTapChiSinhVien.Text = "Các bài báo thuộc về sinh viên";
+            this.btnTapChiSinhVien.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnXemToanBoTapChi
             // 
-            this.button4.Location = new System.Drawing.Point(7, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(360, 62);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Xem toàn bộ danh sách đề tài nhiên cứu khoa học";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnXemToanBoTapChi.Location = new System.Drawing.Point(9, 19);
+            this.btnXemToanBoTapChi.Name = "btnXemToanBoTapChi";
+            this.btnXemToanBoTapChi.Size = new System.Drawing.Size(360, 62);
+            this.btnXemToanBoTapChi.TabIndex = 0;
+            this.btnXemToanBoTapChi.Text = "Xem toàn bộ bài báo";
+            this.btnXemToanBoTapChi.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnTapChiGiaoVien
             // 
-            this.button5.Location = new System.Drawing.Point(7, 87);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(175, 65);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Danh sách cán bộ, giảng viên đăng kí nhiên cứu khoa học";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnTapChiGiaoVien.Location = new System.Drawing.Point(9, 88);
+            this.btnTapChiGiaoVien.Name = "btnTapChiGiaoVien";
+            this.btnTapChiGiaoVien.Size = new System.Drawing.Size(175, 65);
+            this.btnTapChiGiaoVien.TabIndex = 1;
+            this.btnTapChiGiaoVien.Text = "Các bài báo thuộc về cán bộ, giảng viên";
+            this.btnTapChiGiaoVien.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // groupBox3
             // 
-            this.button6.Location = new System.Drawing.Point(190, 86);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(175, 65);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Danh sách sinh viên tham gia nhiên cứu khoa học";
-            this.button6.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.btnDanhSachSinhVienThamGiaNhienCuu);
+            this.groupBox3.Controls.Add(this.btnDanhSachNhienCuuKhoaHocGiaoVien);
+            this.groupBox3.Controls.Add(this.btnDeTaiNhienCuuKhoaHoc);
+            this.groupBox3.Location = new System.Drawing.Point(13, 278);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(373, 160);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Quản lý đề tài nhiên cứu khoa học";
             // 
-            // button7
+            // btnDanhSachSinhVienThamGiaNhienCuu
             // 
-            this.button7.Location = new System.Drawing.Point(9, 19);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(360, 62);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Xem toàn bộ bài báo";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnDanhSachSinhVienThamGiaNhienCuu.Location = new System.Drawing.Point(190, 86);
+            this.btnDanhSachSinhVienThamGiaNhienCuu.Name = "btnDanhSachSinhVienThamGiaNhienCuu";
+            this.btnDanhSachSinhVienThamGiaNhienCuu.Size = new System.Drawing.Size(175, 65);
+            this.btnDanhSachSinhVienThamGiaNhienCuu.TabIndex = 1;
+            this.btnDanhSachSinhVienThamGiaNhienCuu.Text = "Danh sách sinh viên tham gia nhiên cứu khoa học";
+            this.btnDanhSachSinhVienThamGiaNhienCuu.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnDanhSachNhienCuuKhoaHocGiaoVien
             // 
-            this.button8.Location = new System.Drawing.Point(9, 88);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(175, 65);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Các bài báo thuộc về cán bộ, giảng viên";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien.Location = new System.Drawing.Point(7, 87);
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien.Name = "btnDanhSachNhienCuuKhoaHocGiaoVien";
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien.Size = new System.Drawing.Size(175, 65);
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien.TabIndex = 1;
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien.Text = "Danh sách cán bộ, giảng viên đăng kí nhiên cứu khoa học";
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnDeTaiNhienCuuKhoaHoc
             // 
-            this.button9.Location = new System.Drawing.Point(194, 87);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(175, 65);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Các bài báo thuộc về sinh viên";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnDeTaiNhienCuuKhoaHoc.Location = new System.Drawing.Point(7, 18);
+            this.btnDeTaiNhienCuuKhoaHoc.Name = "btnDeTaiNhienCuuKhoaHoc";
+            this.btnDeTaiNhienCuuKhoaHoc.Size = new System.Drawing.Size(360, 62);
+            this.btnDeTaiNhienCuuKhoaHoc.TabIndex = 0;
+            this.btnDeTaiNhienCuuKhoaHoc.Text = "Xem toàn bộ danh sách đề tài nhiên cứu khoa học";
+            this.btnDeTaiNhienCuuKhoaHoc.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // groupBox4
             // 
-            this.button10.Location = new System.Drawing.Point(10, 88);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(175, 65);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "Danh sách cán bộ, giảng viên hướng dẫn";
-            this.button10.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.btnDanhSachSinhVienBaoVe);
+            this.groupBox4.Controls.Add(this.btnDanhSachGiangVienHuongDan);
+            this.groupBox4.Controls.Add(this.btnXemDanhSachDoAnTotNghiep);
+            this.groupBox4.Location = new System.Drawing.Point(410, 278);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(378, 160);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Quản lý đồ án tốt nghiệp";
             // 
-            // button11
+            // btnDanhSachSinhVienBaoVe
             // 
-            this.button11.Location = new System.Drawing.Point(10, 19);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(360, 62);
-            this.button11.TabIndex = 0;
-            this.button11.Text = "Xem toàn bộ danh sách đồ án tốt nghiệp";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnDanhSachSinhVienBaoVe.Location = new System.Drawing.Point(195, 87);
+            this.btnDanhSachSinhVienBaoVe.Name = "btnDanhSachSinhVienBaoVe";
+            this.btnDanhSachSinhVienBaoVe.Size = new System.Drawing.Size(175, 65);
+            this.btnDanhSachSinhVienBaoVe.TabIndex = 1;
+            this.btnDanhSachSinhVienBaoVe.Text = "Danh sách sinh viên tham gia làm đồ án tốt nghiệp";
+            this.btnDanhSachSinhVienBaoVe.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnDanhSachGiangVienHuongDan
             // 
-            this.button12.Location = new System.Drawing.Point(195, 87);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(175, 65);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "Danh sách sinh viên tham gia làm đồ án tốt nghiệp";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnDanhSachGiangVienHuongDan.Location = new System.Drawing.Point(10, 88);
+            this.btnDanhSachGiangVienHuongDan.Name = "btnDanhSachGiangVienHuongDan";
+            this.btnDanhSachGiangVienHuongDan.Size = new System.Drawing.Size(175, 65);
+            this.btnDanhSachGiangVienHuongDan.TabIndex = 1;
+            this.btnDanhSachGiangVienHuongDan.Text = "Danh sách cán bộ, giảng viên hướng dẫn";
+            this.btnDanhSachGiangVienHuongDan.UseVisualStyleBackColor = true;
+            // 
+            // btnXemDanhSachDoAnTotNghiep
+            // 
+            this.btnXemDanhSachDoAnTotNghiep.Location = new System.Drawing.Point(10, 19);
+            this.btnXemDanhSachDoAnTotNghiep.Name = "btnXemDanhSachDoAnTotNghiep";
+            this.btnXemDanhSachDoAnTotNghiep.Size = new System.Drawing.Size(360, 62);
+            this.btnXemDanhSachDoAnTotNghiep.TabIndex = 0;
+            this.btnXemDanhSachDoAnTotNghiep.Text = "Xem toàn bộ danh sách đồ án tốt nghiệp";
+            this.btnXemDanhSachDoAnTotNghiep.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(283, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 33);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Trang Quản Trị";
             // 
             // fChucNang
             // 
@@ -289,21 +291,21 @@
         private System.Windows.Forms.ToolStripMenuItem menuDangXuat;
         private System.Windows.Forms.ToolStripMenuItem menuThoatChuongTrinh;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnQuanLyHoiNGhiSinhVien;
+        private System.Windows.Forms.Button btnQuanLyHoiNghiCanBo;
         private System.Windows.Forms.Button btnXemBaiBaoKhoaHoc;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnTapChiSinhVien;
+        private System.Windows.Forms.Button btnXemToanBoTapChi;
+        private System.Windows.Forms.Button btnTapChiGiaoVien;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDanhSachSinhVienThamGiaNhienCuu;
+        private System.Windows.Forms.Button btnDanhSachNhienCuuKhoaHocGiaoVien;
+        private System.Windows.Forms.Button btnDeTaiNhienCuuKhoaHoc;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnDanhSachSinhVienBaoVe;
+        private System.Windows.Forms.Button btnDanhSachGiangVienHuongDan;
+        private System.Windows.Forms.Button btnXemDanhSachDoAnTotNghiep;
         private System.Windows.Forms.Label label1;
     }
 }

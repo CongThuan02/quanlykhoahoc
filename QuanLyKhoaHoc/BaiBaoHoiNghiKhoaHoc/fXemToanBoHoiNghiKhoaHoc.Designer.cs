@@ -29,22 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.cbKhoaHoc = new System.Windows.Forms.ComboBox();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaBaiBao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbKhoaHoc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +57,34 @@
             this.panel1.Size = new System.Drawing.Size(793, 38);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(43, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nhập vào từ khóa:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(184, 7);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(448, 28);
+            this.textBox1.TabIndex = 1;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(659, 7);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(75, 28);
+            this.btnTimKiem.TabIndex = 0;
+            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(3, 7);
@@ -70,24 +95,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(715, 7);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 28);
-            this.btnTimKiem.TabIndex = 0;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Controls.Add(this.btnSua);
-            this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Location = new System.Drawing.Point(7, 82);
+            this.groupBox1.Location = new System.Drawing.Point(7, 77);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(787, 356);
+            this.groupBox1.Size = new System.Drawing.Size(787, 361);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bài báo tại hội nghị khoa học";
@@ -102,71 +115,12 @@
             this.columnHeader4,
             this.columnHeader5});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 19);
+            this.listView1.Location = new System.Drawing.Point(5, 21);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(691, 337);
+            this.listView1.Size = new System.Drawing.Size(776, 334);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(184, 7);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 28);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nhập vào từ khóa:";
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(700, 92);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 28);
-            this.btnSua.TabIndex = 0;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(700, 36);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 28);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm ";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(700, 150);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 28);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // cbKhoaHoc
-            // 
-            this.cbKhoaHoc.FormattingEnabled = true;
-            this.cbKhoaHoc.Items.AddRange(new object[] {
-            "Toàn bộ",
-            "Sinh viên",
-            "Cán bộ, Giảng viên"});
-            this.cbKhoaHoc.Location = new System.Drawing.Point(694, 50);
-            this.cbKhoaHoc.Name = "cbKhoaHoc";
-            this.cbKhoaHoc.Size = new System.Drawing.Size(100, 21);
-            this.cbKhoaHoc.TabIndex = 2;
-            this.cbKhoaHoc.Text = "Toàn bộ";
             // 
             // columnHeader1
             // 
@@ -197,6 +151,19 @@
             this.columnHeader5.Text = "Mô tả";
             this.columnHeader5.Width = 201;
             // 
+            // cbKhoaHoc
+            // 
+            this.cbKhoaHoc.FormattingEnabled = true;
+            this.cbKhoaHoc.Items.AddRange(new object[] {
+            "Toàn bộ",
+            "Sinh viên",
+            "Cán bộ, Giảng viên"});
+            this.cbKhoaHoc.Location = new System.Drawing.Point(694, 50);
+            this.cbKhoaHoc.Name = "cbKhoaHoc";
+            this.cbKhoaHoc.Size = new System.Drawing.Size(100, 21);
+            this.cbKhoaHoc.TabIndex = 2;
+            this.cbKhoaHoc.Text = "Toàn bộ";
+            // 
             // fXemToanBoHoiNghiKhoaHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +175,7 @@
             this.Name = "fXemToanBoHoiNghiKhoaHoc";
             this.Text = "xem toàn bộ các bài báo tại hội nghị khoa học của cán bộ, giảng viên và sinh viên" +
     "";
+            this.Load += new System.EventHandler(this.fXemToanBoHoiNghiKhoaHoc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -224,9 +192,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.ComboBox cbKhoaHoc;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader MaBaiBao;
