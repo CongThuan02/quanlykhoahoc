@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +61,7 @@
     <Compile Include="BaiBaoHoiNghiKhoaHoc\CanBo\fThemBaiBaoCanBo.Designer.cs">
       <DependentUpon>fThemBaiBaoCanBo.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaiBaoHoiNghiKhoaHoc\CanBo\QuanLyKhoaHocEntiti.cs" />
     <Compile Include="BaiBaoHoiNghiKhoaHoc\fXemToanBoHoiNghiKhoaHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +92,60 @@
     <Compile Include="BaiBaoTrenTapChi\SinhVien\fThemTapChiSinhVien.Designer.cs">
       <DependentUpon>fThemTapChiSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbConnect\BaiBao.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\DoAnTotNghiep.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\GiangVien.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\HoiNghiKhoaHoc.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\NghienCuuKhoaHocCanBo.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\NghienCuuKhoaHocSinhVien.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\QuanLyKhoaHocModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhoaHocModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\QuanLyKhoaHocModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\QuanLyKhoaHocModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhoaHocModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\SinhVien.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\SinhVien_DoAnTotNghiep.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\SinhVien_HKSV.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\sp_helpdiagrams_Result.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\sysdiagram.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect\TaiKhoan.cs">
+      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="fChucNang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +160,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyNhienCuuKhoaHoc\CanBo\fQuanLyCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhienCuuKhoaHoc\CanBo\fQuanLyCanBo.Designer.cs">
+      <DependentUpon>fQuanLyCanBo.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.Designer.cs">
       <DependentUpon>fQuanLyNhienCuuKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhienCuuKhoaHoc\SinhVien\fQuanLySinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhienCuuKhoaHoc\SinhVien\fQuanLySinhVien.Designer.cs">
+      <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaiBaoHoiNghiKhoaHoc\CanBo\fThemBaiBaoCanBo.resx">
       <DependentUpon>fThemBaiBaoCanBo.cs</DependentUpon>
@@ -132,9 +208,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyNhienCuuKhoaHoc\CanBo\fQuanLyCanBo.resx">
+      <DependentUpon>fQuanLyCanBo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.resx">
       <DependentUpon>fQuanLyNhienCuuKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhienCuuKhoaHoc\SinhVien\fQuanLySinhVien.resx">
+      <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DbConnect\QuanLyKhoaHocModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyKhoaHocModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DbConnect\QuanLyKhoaHocModel.edmx.diagram">
+      <DependentUpon>QuanLyKhoaHocModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,8 +241,21 @@
   <ItemGroup>
     <Folder Include="QuanLyDoAnTotNghiep\CanBo\" />
     <Folder Include="QuanLyDoAnTotNghiep\SinhVien\" />
-    <Folder Include="QuanLyNhienCuuKhoaHoc\CanBo\" />
-    <Folder Include="QuanLyNhienCuuKhoaHoc\SinhVien\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbConnect\QuanLyKhoaHocModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyKhoaHocModel.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKhoaHocModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DbConnect\QuanLyKhoaHocModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyKhoaHocModel.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKhoaHocModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

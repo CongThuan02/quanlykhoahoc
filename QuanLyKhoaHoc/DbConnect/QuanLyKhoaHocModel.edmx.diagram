@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="74e18c4759ed4a928e233fc0fe184ee1" Name="Diagram1">
+        <EntityTypeShape EntityType="BaiTapLonModel.BaiBao" Width="1.5" PointX="3" PointY="15.5" />
+        <EntityTypeShape EntityType="BaiTapLonModel.DoAnTotNghiep" Width="1.5" PointX="3" PointY="19.625" />
+        <EntityTypeShape EntityType="BaiTapLonModel.GiangVien" Width="1.5" PointX="3" PointY="10.125" />
+        <EntityTypeShape EntityType="BaiTapLonModel.HoiNghiKhoaHoc" Width="1.5" PointX="3" PointY="1.625" />
+        <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocCanBo" Width="1.5" PointX="5.25" PointY="12" />
+        <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocSinhVien" Width="1.5" PointX="5.25" PointY="8.25" />
+        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien_DoAnTotNghiep" Width="1.5" PointX="5.25" PointY="5.25" />
+        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien_HKSV" Width="1.5" PointX="7.5" PointY="7.125" />
+        <EntityTypeShape EntityType="BaiTapLonModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BaiTapLonModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="8.125" />
+        <AssociationConnector Association="BaiTapLonModel.FK_BaiBao_TaiKhoan" />
+        <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" />
+        <AssociationConnector Association="BaiTapLonModel.FK_GiangVien_TaiKhoan" />
+        <AssociationConnector Association="BaiTapLonModel.FK_NghienCuuKhoaHocCanBo_GiangVien" />
+        <AssociationConnector Association="BaiTapLonModel.FK_NghienCuuKhoaHocSinhVien_GiangVien" />
+        <AssociationConnector Association="BaiTapLonModel.FK_HoiNghiKhoaHoc_TaiKhoan" />
+        <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" />
+        <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_SinhVien" />
+        <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_HKSV_SinhVien" />
+        <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_TaiKhoan" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

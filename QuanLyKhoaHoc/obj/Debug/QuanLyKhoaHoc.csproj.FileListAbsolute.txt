@@ -16,3 +16,10 @@ E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.Sinh
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoTrenTapChi.fXemToanBoBaiBaoTrenTapChi.resources
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoTrenTapChi.SinhVien.fThemTapChiSinhVien.resources
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.fQuanLyNhienCuuKhoaHoc.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.CanBo.fQuanLyCanBo.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.SinhVien.fQuanLySinhVien.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\EntityFramework.dll
+E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\EntityFramework.SqlServer.dll
+E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\EntityFramework.xml
+E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\EntityFramework.SqlServer.xml
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.csproj.CopyComplete
