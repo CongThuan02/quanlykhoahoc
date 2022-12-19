@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
+namespace QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.CanBo
 {
-    public partial class fThemBaiBaoCanBo : Form
+    public partial class fQuanLyCanBo : Form
     {
-        public fThemBaiBaoCanBo()
+        public fQuanLyCanBo()
         {
             InitializeComponent();
-        }
-
-        private void fThemBaiBaoCanBo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

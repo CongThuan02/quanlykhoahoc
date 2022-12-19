@@ -64,6 +64,24 @@
     <Compile Include="BaiBaoHoiNghiKhoaHoc\SinhVien\fThemBaiBaoChoSinhVien.Designer.cs">
       <DependentUpon>fThemBaiBaoChoSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaiBaoTrenTapChi\CanBo\fThemTapChiCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaiBaoTrenTapChi\CanBo\fThemTapChiCanBo.Designer.cs">
+      <DependentUpon>fThemTapChiCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaiBaoTrenTapChi\fXemToanBoBaiBaoTrenTapChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaiBaoTrenTapChi\fXemToanBoBaiBaoTrenTapChi.Designer.cs">
+      <DependentUpon>fXemToanBoBaiBaoTrenTapChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaiBaoTrenTapChi\SinhVien\fThemTapChiSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaiBaoTrenTapChi\SinhVien\fThemTapChiSinhVien.Designer.cs">
+      <DependentUpon>fThemTapChiSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="fChucNang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +96,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.Designer.cs">
+      <DependentUpon>fQuanLyNhienCuuKhoaHoc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaiBaoHoiNghiKhoaHoc\CanBo\fThemBaiBaoCanBo.resx">
       <DependentUpon>fThemBaiBaoCanBo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaiBaoHoiNghiKhoaHoc\fXemToanBoHoiNghiKhoaHoc.resx">
       <DependentUpon>fXemToanBoHoiNghiKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaiBaoHoiNghiKhoaHoc\SinhVien\fThemBaiBaoChoSinhVien.resx">
+      <DependentUpon>fThemBaiBaoChoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaiBaoTrenTapChi\fXemToanBoBaiBaoTrenTapChi.resx">
+      <DependentUpon>fXemToanBoBaiBaoTrenTapChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaiBaoTrenTapChi\SinhVien\fThemTapChiSinhVien.resx">
+      <DependentUpon>fThemTapChiSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fChucNang.resx">
       <DependentUpon>fChucNang.cs</DependentUpon>
@@ -99,6 +132,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.resx">
+      <DependentUpon>fQuanLyNhienCuuKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,8 +149,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaiBaoTrenTapChi\CanBo\" />
-    <Folder Include="BaiBaoTrenTapChi\SinhVien\" />
     <Folder Include="QuanLyDoAnTotNghiep\CanBo\" />
     <Folder Include="QuanLyDoAnTotNghiep\SinhVien\" />
     <Folder Include="QuanLyNhienCuuKhoaHoc\CanBo\" />

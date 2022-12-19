@@ -1,6 +1,12 @@
 ﻿using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc;
 using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo;
 using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien;
+using QuanLyKhoaHoc.BaiBaoTrenTapChi;
+using QuanLyKhoaHoc.BaiBaoTrenTapChi.CanBo;
+using QuanLyKhoaHoc.BaiBaoTrenTapChi.SinhVien;
+using QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc;
+using QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.CanBo;
+using QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.SinhVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,6 +66,48 @@ namespace QuanLyKhoaHoc
             fThemBaiBaoChoSinhVien _them = new fThemBaiBaoChoSinhVien();
             this.Hide();
             _them.ShowDialog();
+        }
+
+        private void btnXemToanBoTapChi_Click(object sender, EventArgs e)
+        {
+        fXemToanBoBaiBaoTrenTapChi _tapChi = new fXemToanBoBaiBaoTrenTapChi();
+            this.Hide();
+            _tapChi.ShowDialog();
+        }
+
+        private void btnTapChiGiaoVien_Click(object sender, EventArgs e)
+        {
+            fThemTapChiCanBo _fThemTapChiCanBo = new fThemTapChiCanBo();
+            this.Hide();
+            _fThemTapChiCanBo.ShowDialog();
+        }
+
+        private void btnTapChiSinhVien_Click(object sender, EventArgs e)
+        {
+            fThemTapChiSinhVien _themTapChiSinhVien = new fThemTapChiSinhVien();
+            this.Hide();
+            _themTapChiSinhVien.ShowDialog();
+        }
+
+        private void btnDeTaiNhienCuuKhoaHoc_Click(object sender, EventArgs e)
+        {
+            fQuanLyNhienCuuKhoaHoc _views = new fQuanLyNhienCuuKhoaHoc();
+            this.Hide();
+            _views.ShowDialog();
+        }
+
+        private void btnDanhSachNhienCuuKhoaHocGiaoVien_Click(object sender, EventArgs e)
+        {
+            fQuanLyCanBo _view = new fQuanLyCanBo();    
+            this.Hide();
+            _view.ShowDialog();
+        }
+
+        private void btnDanhSachSinhVienThamGiaNhienCuu_Click(object sender, EventArgs e)
+        {
+            fQuanLySinhVien _view = new fQuanLySinhVien();
+            this.Hide();    
+            _view.ShowDialog();
         }
     }
 }

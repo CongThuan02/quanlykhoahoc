@@ -151,6 +151,7 @@
             this.btnTapChiSinhVien.TabIndex = 1;
             this.btnTapChiSinhVien.Text = "Các bài báo thuộc về sinh viên";
             this.btnTapChiSinhVien.UseVisualStyleBackColor = true;
+            this.btnTapChiSinhVien.Click += new System.EventHandler(this.btnTapChiSinhVien_Click);
             // 
             // btnXemToanBoTapChi
             // 
@@ -160,6 +161,7 @@
             this.btnXemToanBoTapChi.TabIndex = 0;
             this.btnXemToanBoTapChi.Text = "Xem toàn bộ bài báo";
             this.btnXemToanBoTapChi.UseVisualStyleBackColor = true;
+            this.btnXemToanBoTapChi.Click += new System.EventHandler(this.btnXemToanBoTapChi_Click);
             // 
             // btnTapChiGiaoVien
             // 
@@ -169,6 +171,7 @@
             this.btnTapChiGiaoVien.TabIndex = 1;
             this.btnTapChiGiaoVien.Text = "Các bài báo thuộc về cán bộ, giảng viên";
             this.btnTapChiGiaoVien.UseVisualStyleBackColor = true;
+            this.btnTapChiGiaoVien.Click += new System.EventHandler(this.btnTapChiGiaoVien_Click);
             // 
             // groupBox3
             // 
@@ -190,6 +193,7 @@
             this.btnDanhSachSinhVienThamGiaNhienCuu.TabIndex = 1;
             this.btnDanhSachSinhVienThamGiaNhienCuu.Text = "Danh sách sinh viên tham gia nhiên cứu khoa học";
             this.btnDanhSachSinhVienThamGiaNhienCuu.UseVisualStyleBackColor = true;
+            this.btnDanhSachSinhVienThamGiaNhienCuu.Click += new System.EventHandler(this.btnDanhSachSinhVienThamGiaNhienCuu_Click);
             // 
             // btnDanhSachNhienCuuKhoaHocGiaoVien
             // 
@@ -199,6 +203,7 @@
             this.btnDanhSachNhienCuuKhoaHocGiaoVien.TabIndex = 1;
             this.btnDanhSachNhienCuuKhoaHocGiaoVien.Text = "Danh sách cán bộ, giảng viên đăng kí nhiên cứu khoa học";
             this.btnDanhSachNhienCuuKhoaHocGiaoVien.UseVisualStyleBackColor = true;
+            this.btnDanhSachNhienCuuKhoaHocGiaoVien.Click += new System.EventHandler(this.btnDanhSachNhienCuuKhoaHocGiaoVien_Click);
             // 
             // btnDeTaiNhienCuuKhoaHoc
             // 
@@ -208,6 +213,7 @@
             this.btnDeTaiNhienCuuKhoaHoc.TabIndex = 0;
             this.btnDeTaiNhienCuuKhoaHoc.Text = "Xem toàn bộ danh sách đề tài nhiên cứu khoa học";
             this.btnDeTaiNhienCuuKhoaHoc.UseVisualStyleBackColor = true;
+            this.btnDeTaiNhienCuuKhoaHoc.Click += new System.EventHandler(this.btnDeTaiNhienCuuKhoaHoc_Click);
             // 
             // groupBox4
             // 

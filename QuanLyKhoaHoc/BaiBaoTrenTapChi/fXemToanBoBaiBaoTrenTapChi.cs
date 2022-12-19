@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
+namespace QuanLyKhoaHoc.BaiBaoTrenTapChi
 {
-    public partial class fThemBaiBaoCanBo : Form
+    public partial class fXemToanBoBaiBaoTrenTapChi : Form
     {
-        public fThemBaiBaoCanBo()
+        public fXemToanBoBaiBaoTrenTapChi()
         {
             InitializeComponent();
-        }
-
-        private void fThemBaiBaoCanBo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

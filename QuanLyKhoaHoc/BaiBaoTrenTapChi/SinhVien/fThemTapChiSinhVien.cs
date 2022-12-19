@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
+namespace QuanLyKhoaHoc.BaiBaoTrenTapChi.SinhVien
 {
-    public partial class fThemBaiBaoCanBo : Form
+    public partial class fThemTapChiSinhVien : Form
     {
-        public fThemBaiBaoCanBo()
+        public fThemTapChiSinhVien()
         {
             InitializeComponent();
         }
 
-        private void fThemBaiBaoCanBo_Load(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

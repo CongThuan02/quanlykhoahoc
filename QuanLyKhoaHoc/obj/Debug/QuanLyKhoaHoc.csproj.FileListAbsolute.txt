@@ -12,3 +12,7 @@ E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.fChucNang.resources
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.fDangNhap.resources
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.fXemToanBoHoiNghiKhoaHoc.resources
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo.fThemBaiBaoCanBo.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien.fThemBaiBaoChoSinhVien.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoTrenTapChi.fXemToanBoBaiBaoTrenTapChi.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoTrenTapChi.SinhVien.fThemTapChiSinhVien.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.fQuanLyNhienCuuKhoaHoc.resources

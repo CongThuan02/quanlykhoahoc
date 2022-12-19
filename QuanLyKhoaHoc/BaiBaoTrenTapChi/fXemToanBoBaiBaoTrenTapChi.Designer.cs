@@ -1,6 +1,6 @@
-﻿namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc
+﻿namespace QuanLyKhoaHoc.BaiBaoTrenTapChi
 {
-    partial class fXemToanBoHoiNghiKhoaHoc
+    partial class fXemToanBoBaiBaoTrenTapChi
     {
         /// <summary>
         /// Required designer variable.
@@ -42,23 +42,21 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbKhoaHoc = new System.Windows.Forms.ComboBox();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(4, 9);
+            this.panel1.Location = new System.Drawing.Point(4, 11);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 38);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 3;
             // 
             // label1
             // 
@@ -72,9 +70,6 @@
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(184, 7);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -83,15 +78,12 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimKiem.Location = new System.Drawing.Point(659, 7);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 28);
             this.btnTimKiem.TabIndex = 0;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // button1
             // 
@@ -101,41 +93,34 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "<";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Location = new System.Drawing.Point(7, 77);
+            this.groupBox1.Location = new System.Drawing.Point(7, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(787, 361);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách bài báo tại hội nghị khoa học";
+            this.groupBox1.Text = "Danh sách bài báo tại tạp chí";
             // 
             // listView1
             // 
-            this.listView1.AllowColumnReorder = true;
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.MaBaiBao,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.FullRowSelect = true;
+            this.columnHeader5,
+            this.columnHeader6});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(5, 21);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(776, 334);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.UseWaitCursor = true;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
@@ -169,31 +154,32 @@
             // 
             // cbKhoaHoc
             // 
-            this.cbKhoaHoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbKhoaHoc.FormattingEnabled = true;
             this.cbKhoaHoc.Items.AddRange(new object[] {
             "Toàn bộ",
             "Sinh viên",
             "Cán bộ, Giảng viên"});
-            this.cbKhoaHoc.Location = new System.Drawing.Point(694, 50);
+            this.cbKhoaHoc.Location = new System.Drawing.Point(694, 52);
             this.cbKhoaHoc.Name = "cbKhoaHoc";
             this.cbKhoaHoc.Size = new System.Drawing.Size(100, 21);
-            this.cbKhoaHoc.TabIndex = 2;
+            this.cbKhoaHoc.TabIndex = 5;
             this.cbKhoaHoc.Text = "Toàn bộ";
             // 
-            // fXemToanBoHoiNghiKhoaHoc
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Quốc gia";
+            this.columnHeader6.Width = 87;
+            // 
+            // fXemToanBoBaiBaoTrenTapChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbKhoaHoc);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "fXemToanBoHoiNghiKhoaHoc";
-            this.Text = "xem toàn bộ các bài báo tại hội nghị khoa học của cán bộ, giảng viên và sinh viên" +
-    "";
-            this.Load += new System.EventHandler(this.fXemToanBoHoiNghiKhoaHoc_Load);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.cbKhoaHoc);
+            this.Name = "fXemToanBoBaiBaoTrenTapChi";
+            this.Text = "fXemToanBoBaiBaoTrenTapChi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -210,12 +196,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ComboBox cbKhoaHoc;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader MaBaiBao;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ComboBox cbKhoaHoc;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
