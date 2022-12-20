@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="BaiTapLonModel.BaiBao" Width="1.5" PointX="3" PointY="1.625" />
         <EntityTypeShape EntityType="BaiTapLonModel.DoAnTotNghiep" Width="1.5" PointX="3" PointY="19.5" />
         <EntityTypeShape EntityType="BaiTapLonModel.GiangVien" Width="1.5" PointX="3" PointY="10.5" />
-        <EntityTypeShape EntityType="BaiTapLonModel.HoiNghiKhoaHoc" Width="1.5" PointX="3" PointY="5.375" />
+        <EntityTypeShape EntityType="BaiTapLonModel.HoiNghiKhoaHoc" Width="2.875" PointX="3" PointY="5.375" />
         <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocCanBo" Width="1.5" PointX="5.25" PointY="12.375" />
         <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocSinhVien" Width="1.5" PointX="5.25" PointY="8.625" />
         <EntityTypeShape EntityType="BaiTapLonModel.SinhVien" Width="1.5" PointX="3" PointY="15.875" />
