@@ -54,7 +54,7 @@
           <Property Name="MaBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="TenBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="NguoiSoHuuId" Type="int" Nullable="false" />
-          <Property Name="TrangThai" Type="int" Nullable="false" />
+          <Property Name="TrangThai" Type="int" />
           <Property Name="ThoGianDangBai" Type="int" />
           <Property Name="MoTa" Type="text" />
         </EntityType>
@@ -491,7 +491,7 @@
           <Property Name="MaBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TenBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="NguoiSoHuuId" Type="Int32" Nullable="false" />
-          <Property Name="TrangThai" Type="Int32" Nullable="false" />
+          <Property Name="TrangThai" Type="Int32" />
           <Property Name="ThoGianDangBai" Type="Int32" />
           <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_HoiNghiKhoaHoc_TaiKhoan" FromRole="HoiNghiKhoaHoc" ToRole="TaiKhoan" />

@@ -44,9 +44,10 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
                       };
             var data = await sql.ToListAsync();
             lsBaiBaoCanBo.Items.Clear();
+            int index = 1;
             foreach(var item in data)
             {
-                var baiBao = new ListViewItem();
+                var baiBao = new ListViewItem(index.ToString());
                 baiBao.SubItems.Add(item.MaGiangVien);
                 baiBao.SubItems.Add(item.TenGiangVien);
                 baiBao.SubItems.Add(item.MaBaiBao);
@@ -54,6 +55,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
                 baiBao.SubItems.Add(item.NoiDungBaiBao);
 
                 lsBaiBaoCanBo.Items.Add(baiBao);
+                index++;
             }
 
 
@@ -217,11 +219,30 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
            
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private async void btnSua_Click(object sender, EventArgs e)
         {
             var _maBaiBao = txtMaBaiBao.Text;
             var _tenBaiBao = txtTenBaiBao.Text;
             var _moTa = txtMoTa.Text;
+            //MessageBox.Show(_moTa);
+            var result = await _context.HoiNghiKhoaHocs.Where(x => x.MaBaiBao.Equals(_maBaiBao)).FirstOrDefaultAsync();
+            if (result != null)
+            {
+                try
+                {
+                    result.MoTa = _moTa;
+                    result.TenBaiBao = _tenBaiBao;
+                  
+                    _context.Entry(result).State = EntityState.Modified;
+                    _context.SaveChanges();
+                    fThemBaiBaoCanBo_Load(sender, e);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
 
         }
