@@ -27,25 +27,25 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             lsBaiBaoCanBo.FullRowSelect = true;
 
         }
-        private async void fThemBaiBaoCanBo_Load(object sender, EventArgs e)
+        private async Task loadingdata()
         {
-            loading();
-
             var sql = from hoiNghiKhoaHoc in _context.HoiNghiKhoaHocs
                       join taiKhoan in _context.TaiKhoans
                       on hoiNghiKhoaHoc.NguoiSoHuuId equals taiKhoan.Id
+                      where hoiNghiKhoaHoc.TenBaiBao.Contains(txtTimKiem.Text) && (taiKhoan.LoaiTaiKhoan == 0)
                       select new
                       {
                           MaGiangVien = taiKhoan.MaTaiKhoan,
                           TenGiangVien = taiKhoan.HoTen,
                           MaBaiBao = hoiNghiKhoaHoc.MaBaiBao,
                           TenBaiBao = hoiNghiKhoaHoc.TenBaiBao,
-                          NoiDungBaiBao = hoiNghiKhoaHoc.MoTa
+                          NoiDungBaiBao = hoiNghiKhoaHoc.MoTa,
+                          Nam = hoiNghiKhoaHoc.Nam,
                       };
             var data = await sql.ToListAsync();
             lsBaiBaoCanBo.Items.Clear();
             int index = 1;
-            foreach(var item in data)
+            foreach (var item in data)
             {
                 var baiBao = new ListViewItem(index.ToString());
                 baiBao.SubItems.Add(item.MaGiangVien);
@@ -53,12 +53,16 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
                 baiBao.SubItems.Add(item.MaBaiBao);
                 baiBao.SubItems.Add(item.TenBaiBao);
                 baiBao.SubItems.Add(item.NoiDungBaiBao);
+                baiBao.SubItems.Add(item.Nam.ToString());
 
                 lsBaiBaoCanBo.Items.Add(baiBao);
                 index++;
             }
-
-
+        }
+        private async void fThemBaiBaoCanBo_Load(object sender, EventArgs e)
+        {
+            loading();
+            await loadingdata();
             txtTenGiangVien.Enabled = false;
             cbGiangVien.Items.Clear();
             canBos = await _context.GiangViens.ToListAsync();
@@ -83,6 +87,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             string _maBaiBao = txtMaBaiBao.Text.Trim();
             string _tenBaiBao = txtTenBaiBao.Text.Trim();
             string _mota = txtMoTa.Text.Trim();
+            string _nam = txtNam.Text.Trim();
             string _maGiangVien = cbGiangVien.SelectedItem.ToString();
             var current = cbGiangVien.SelectedItem;
             var MaTaiKhoan = current.GetType().GetProperty("_MaTaiKhoan").GetValue(current, null).ToString();
@@ -98,27 +103,35 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             }
             else
             {
-               if(_maBaiBao == "" || _tenBaiBao =="" || _mota == "")
+               if(_maBaiBao == "" || _tenBaiBao =="" || _mota == "" || _nam =="")
                 {
                     MessageBox.Show("vui lòng nhập đầy đủ thông tin cho bài báo");
                 }
                 else
                 {
-                    var hoiNghiKhoaHocCanBo = new HoiNghiKhoaHoc
+                   if(int.Parse(_nam)<2222 && int.Parse(_nam) > 1665)
                     {
-                        MaBaiBao = _maBaiBao,
-                        TenBaiBao = _tenBaiBao,
-                        NguoiSoHuuId = id,
-                        MoTa = _mota
+                        var hoiNghiKhoaHocCanBo = new HoiNghiKhoaHoc
+                        {
+                            MaBaiBao = _maBaiBao,
+                            TenBaiBao = _tenBaiBao,
+                            NguoiSoHuuId = id,
+                            MoTa = _mota,
+                            Nam = int.Parse(_nam),
 
-                    };
-                    _context.HoiNghiKhoaHocs.Add(hoiNghiKhoaHocCanBo);
-                    await _context.SaveChangesAsync();
-                    MessageBox.Show("Thêm bài báo thành công");
-                    txtMaBaiBao.Clear();
-                    txtMoTa.Clear();
-                    txtTenBaiBao.Clear();
-                    fThemBaiBaoCanBo_Load(sender,e);
+                        };
+                        _context.HoiNghiKhoaHocs.Add(hoiNghiKhoaHocCanBo);
+                        await _context.SaveChangesAsync();
+                        MessageBox.Show("Thêm bài báo thành công");
+                        txtMaBaiBao.Clear();
+                        txtMoTa.Clear();
+                        txtTenBaiBao.Clear();
+                        fThemBaiBaoCanBo_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Năm không hợp lệ ");
+                    }
                 }
 
             }
@@ -212,7 +225,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             ListViewItem item = lsBaiBaoCanBo.SelectedItems[0];
            
             var maGv = item.SubItems[1].Text;
-            cbGiangVien.SelectedIndex = canBos.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maGv));
+            var a= cbGiangVien.SelectedIndex = canBos.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maGv));
             txtMaBaiBao.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[3].Text;
             txtTenBaiBao.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[4].Text;
             txtMoTa.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[5].Text;
@@ -245,6 +258,12 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             }
 
 
+        }
+
+        private async void btnTimKiem_Click(object sender, EventArgs e)
+        {
+          await loadingdata();
+           
         }
     }
 }

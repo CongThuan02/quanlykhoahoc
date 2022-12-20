@@ -47,11 +47,10 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="TenBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TenBaiBao" Type="text" Nullable="false" />
     <Property Name="NguoiSoHuuId" Type="int" Nullable="false" />
-    <Property Name="TrangThai" Type="int" />
-    <Property Name="ThoGianDangBai" Type="int" />
-    <Property Name="MoTa" Type="text" />
+    <Property Name="Nam" Type="int" Nullable="false" />
+    <Property Name="MoTa" Type="text" Nullable="false" />
   </EntityType>
   <EntityType Name="NghienCuuKhoaHocCanBo">
     <Key>
@@ -128,7 +127,7 @@
     <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
     <Property Name="Sdt" Type="nchar" MaxLength="10" Nullable="false" />
     <Property Name="TrangThai" Type="bit" Nullable="false" />
-    <Property Name="LoaiTaiKhoan" Type="nvarchar" MaxLength="100" />
+    <Property Name="LoaiTaiKhoan" Type="int" />
   </EntityType>
   <Association Name="FK_BaiBao_TaiKhoan">
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />

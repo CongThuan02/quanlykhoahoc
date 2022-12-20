@@ -52,11 +52,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="TenBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="TenBaiBao" Type="text" Nullable="false" />
           <Property Name="NguoiSoHuuId" Type="int" Nullable="false" />
-          <Property Name="TrangThai" Type="int" />
-          <Property Name="ThoGianDangBai" Type="int" />
-          <Property Name="MoTa" Type="text" />
+          <Property Name="Nam" Type="int" Nullable="false" />
+          <Property Name="MoTa" Type="text" Nullable="false" />
         </EntityType>
         <EntityType Name="NghienCuuKhoaHocCanBo">
           <Key>
@@ -133,7 +132,7 @@
           <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
           <Property Name="Sdt" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="TrangThai" Type="bit" Nullable="false" />
-          <Property Name="LoaiTaiKhoan" Type="nvarchar" MaxLength="100" />
+          <Property Name="LoaiTaiKhoan" Type="int" />
         </EntityType>
         <Association Name="FK_BaiBao_TaiKhoan">
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
@@ -489,11 +488,10 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="TenBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TenBaiBao" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="NguoiSoHuuId" Type="Int32" Nullable="false" />
-          <Property Name="TrangThai" Type="Int32" />
-          <Property Name="ThoGianDangBai" Type="Int32" />
-          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Nam" Type="Int32" Nullable="false" />
+          <Property Name="MoTa" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_HoiNghiKhoaHoc_TaiKhoan" FromRole="HoiNghiKhoaHoc" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="NghienCuuKhoaHocCanBo">
@@ -581,7 +579,7 @@
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Sdt" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="TrangThai" Type="Boolean" Nullable="false" />
-          <Property Name="LoaiTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoaiTaiKhoan" Type="Int32" />
           <NavigationProperty Name="BaiBaos" Relationship="BaiTapLonModel.FK_BaiBao_TaiKhoan" FromRole="TaiKhoan" ToRole="BaiBao" />
           <NavigationProperty Name="GiangViens" Relationship="BaiTapLonModel.FK_GiangVien_TaiKhoan" FromRole="TaiKhoan" ToRole="GiangVien" />
           <NavigationProperty Name="HoiNghiKhoaHocs" Relationship="BaiTapLonModel.FK_HoiNghiKhoaHoc_TaiKhoan" FromRole="TaiKhoan" ToRole="HoiNghiKhoaHoc" />
@@ -785,8 +783,7 @@
             <EntityTypeMapping TypeName="BaiTapLonModel.HoiNghiKhoaHoc">
               <MappingFragment StoreEntitySet="HoiNghiKhoaHoc">
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="ThoGianDangBai" ColumnName="ThoGianDangBai" />
-                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="NguoiSoHuuId" ColumnName="NguoiSoHuuId" />
                 <ScalarProperty Name="TenBaiBao" ColumnName="TenBaiBao" />
                 <ScalarProperty Name="MaBaiBao" ColumnName="MaBaiBao" />

@@ -146,11 +146,10 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MaBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TenBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TenBaiBao" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="NguoiSoHuuId" Type="Int32" Nullable="false" />
-    <Property Name="TrangThai" Type="Int32" />
-    <Property Name="ThoGianDangBai" Type="Int32" />
-    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Nam" Type="Int32" Nullable="false" />
+    <Property Name="MoTa" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_HoiNghiKhoaHoc_TaiKhoan" FromRole="HoiNghiKhoaHoc" ToRole="TaiKhoan" />
   </EntityType>
   <EntityType Name="NghienCuuKhoaHocCanBo">
@@ -238,7 +237,7 @@
     <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Sdt" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="TrangThai" Type="Boolean" Nullable="false" />
-    <Property Name="LoaiTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiTaiKhoan" Type="Int32" />
     <NavigationProperty Name="BaiBaos" Relationship="BaiTapLonModel.FK_BaiBao_TaiKhoan" FromRole="TaiKhoan" ToRole="BaiBao" />
     <NavigationProperty Name="GiangViens" Relationship="BaiTapLonModel.FK_GiangVien_TaiKhoan" FromRole="TaiKhoan" ToRole="GiangVien" />
     <NavigationProperty Name="HoiNghiKhoaHocs" Relationship="BaiTapLonModel.FK_HoiNghiKhoaHoc_TaiKhoan" FromRole="TaiKhoan" ToRole="HoiNghiKhoaHoc" />

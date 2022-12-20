@@ -32,7 +32,7 @@ namespace QuanLyKhoaHoc.DbConnect
         public string DiaChi { get; set; }
         public string Sdt { get; set; }
         public bool TrangThai { get; set; }
-        public string LoaiTaiKhoan { get; set; }
+        public Nullable<int> LoaiTaiKhoan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BaiBao> BaiBaos { get; set; }
@@ -42,5 +42,10 @@ namespace QuanLyKhoaHoc.DbConnect
         public virtual ICollection<HoiNghiKhoaHoc> HoiNghiKhoaHocs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SinhVien> SinhViens { get; set; }
+
+        public static implicit operator int(TaiKhoan v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
