@@ -53,13 +53,14 @@
             this.txtTenGiangVien = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lsBaiBaoCanBo = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,12 +129,14 @@
             this.menuQuayLai.Name = "menuQuayLai";
             this.menuQuayLai.Size = new System.Drawing.Size(176, 22);
             this.menuQuayLai.Text = "Quay lại";
+            this.menuQuayLai.Click += new System.EventHandler(this.menuQuayLai_Click);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
             this.menuThoat.Size = new System.Drawing.Size(176, 22);
             this.menuThoat.Text = "Thoát chương trình";
+            this.menuThoat.Click += new System.EventHandler(this.menuThoat_Click);
             // 
             // panel2
             // 
@@ -164,6 +167,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm Bài báo";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbGiangVien
             // 
@@ -295,7 +299,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.listView1);
+            this.groupBox2.Controls.Add(this.lsBaiBaoCanBo);
             this.groupBox2.Location = new System.Drawing.Point(1, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(795, 220);
@@ -303,25 +307,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách bài báo tại hội nghị khoa học của cán bộ, giảng viên";
             // 
-            // listView1
+            // lsBaiBaoCanBo
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsBaiBaoCanBo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10,
-            this.columnHeader12});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 20);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(789, 200);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader12,
+            this.columnHeader2});
+            this.lsBaiBaoCanBo.HideSelection = false;
+            this.lsBaiBaoCanBo.Location = new System.Drawing.Point(3, 20);
+            this.lsBaiBaoCanBo.Name = "lsBaiBaoCanBo";
+            this.lsBaiBaoCanBo.Size = new System.Drawing.Size(789, 200);
+            this.lsBaiBaoCanBo.TabIndex = 0;
+            this.lsBaiBaoCanBo.UseCompatibleStateImageBehavior = false;
+            this.lsBaiBaoCanBo.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -351,6 +353,10 @@
             // 
             this.columnHeader12.Text = "Nội dung bài báo";
             this.columnHeader12.Width = 125;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Năm";
             // 
             // fThemBaiBaoCanBo
             // 
@@ -403,7 +409,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTenGiangVien;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lsBaiBaoCanBo;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
@@ -411,5 +417,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ComboBox cbGiangVien;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

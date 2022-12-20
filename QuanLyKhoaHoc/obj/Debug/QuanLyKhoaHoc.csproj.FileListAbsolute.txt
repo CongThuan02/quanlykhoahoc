@@ -23,3 +23,7 @@ E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\EntityFramework.SqlServer.dll
 E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\EntityFramework.xml
 E:\quanlykhoahoc\QuanLyKhoaHoc\bin\Debug\EntityFramework.SqlServer.xml
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.csproj.CopyComplete
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo.fGiangVienHD.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyDoAnTotNghiep.fXemDoAnTotNghiep.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyDoAnTotNghiep.SinhVien.fSinhVienBaoLamDoAn.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.fXemNhienCuuKhoaHoc.resources

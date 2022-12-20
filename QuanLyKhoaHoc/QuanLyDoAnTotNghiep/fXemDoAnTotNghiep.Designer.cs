@@ -1,6 +1,6 @@
-﻿namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc
+﻿namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep
 {
-    partial class fXemToanBoHoiNghiKhoaHoc
+    partial class fXemDoAnTotNghiep
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaBaiBao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,10 +35,67 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbKhoaHoc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // listView1
+            // 
+            this.listView1.AllowColumnReorder = true;
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.MaBaiBao,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(5, 21);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(776, 334);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            // 
+            // MaBaiBao
+            // 
+            this.MaBaiBao.Text = "Mã bài báo";
+            this.MaBaiBao.Width = 78;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên bài báo";
+            this.columnHeader2.Width = 111;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Chủ Bài báo";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thời gian đăng bài";
+            this.columnHeader4.Width = 116;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Mô tả";
+            this.columnHeader5.Width = 201;
             // 
             // panel1
             // 
@@ -55,10 +106,10 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(4, 9);
+            this.panel1.Location = new System.Drawing.Point(4, 11);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 38);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 3;
             // 
             // label1
             // 
@@ -91,7 +142,6 @@
             this.btnTimKiem.TabIndex = 0;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // button1
             // 
@@ -101,7 +151,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "<";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -109,64 +158,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Location = new System.Drawing.Point(7, 77);
+            this.groupBox1.Location = new System.Drawing.Point(7, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(787, 361);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bài báo tại hội nghị khoa học";
-            // 
-            // listView1
-            // 
-            this.listView1.AllowColumnReorder = true;
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.MaBaiBao,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(5, 21);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(776, 334);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            // 
-            // MaBaiBao
-            // 
-            this.MaBaiBao.Text = "Mã bài báo";
-            this.MaBaiBao.Width = 78;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên bài báo";
-            this.columnHeader2.Width = 111;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Chủ Bài báo";
-            this.columnHeader3.Width = 120;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thời gian đăng bài";
-            this.columnHeader4.Width = 116;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Mô tả";
-            this.columnHeader5.Width = 201;
             // 
             // cbKhoaHoc
             // 
@@ -177,24 +174,22 @@
             "Toàn bộ",
             "Sinh viên",
             "Cán bộ, Giảng viên"});
-            this.cbKhoaHoc.Location = new System.Drawing.Point(694, 50);
+            this.cbKhoaHoc.Location = new System.Drawing.Point(694, 52);
             this.cbKhoaHoc.Name = "cbKhoaHoc";
             this.cbKhoaHoc.Size = new System.Drawing.Size(100, 21);
-            this.cbKhoaHoc.TabIndex = 2;
+            this.cbKhoaHoc.TabIndex = 5;
             this.cbKhoaHoc.Text = "Toàn bộ";
             // 
-            // fXemToanBoHoiNghiKhoaHoc
+            // fXemDoAnTotNghiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbKhoaHoc);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "fXemToanBoHoiNghiKhoaHoc";
-            this.Text = "xem toàn bộ các bài báo tại hội nghị khoa học của cán bộ, giảng viên và sinh viên" +
-    "";
-            this.Load += new System.EventHandler(this.fXemToanBoHoiNghiKhoaHoc_Load);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.cbKhoaHoc);
+            this.Name = "fXemDoAnTotNghiep";
+            this.Text = "fXemDoAnTotNghiep";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -204,19 +199,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ComboBox cbKhoaHoc;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader MaBaiBao;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cbKhoaHoc;
     }
 }

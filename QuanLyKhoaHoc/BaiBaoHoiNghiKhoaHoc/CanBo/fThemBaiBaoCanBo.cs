@@ -14,14 +14,33 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
 {
-    public partial class fThemBaiBaoCanBo : Form
-    {
-        private readonly QuanLyKhoaHocEntities _context = new QuanLyKhoaHocEntities();
-        public fThemBaiBaoCanBo()
+        public partial class fThemBaiBaoCanBo : Form
         {
-            InitializeComponent();
+            private readonly QuanLyKhoaHocEntities _context = new QuanLyKhoaHocEntities();
+            public fThemBaiBaoCanBo()
+            {
+                InitializeComponent();
+            }
+            private async void loading()
+            {
+                lsBaiBaoCanBo.Items.Clear();
+                var index = 1;
+                var _baiBao = await _context.TaiKhoans.ToListAsync();
+            foreach ( var item in _baiBao )
+            {
+                var items = new ListViewItem(index.ToString());
+                items.SubItems.Add(item.Id.ToString());
+                items.SubItems.Add(item.HoTen);
+                var baibao = await _context.HoiNghiKhoaHocs.Where(h => h.NguoiSoHuuId == item.Id).ToListAsync();
+               foreach(var i in baibao)
+                {
+                    items.SubItems.Add(i.TenBaiBao.ToString());
+                };
+                lsBaiBaoCanBo.Items.Add(items);
+                index++;
+                
+            }
         }
-
         private async void fThemBaiBaoCanBo_Load(object sender, EventArgs e)
         {
             txtTenGiangVien.Enabled= false;
@@ -40,6 +59,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
 
             cbGiangVien.ValueMember = "_Id";
             cbGiangVien.DisplayMember = "_MaTaiKhoan";
+            loading();
 
         }
 
@@ -108,6 +128,28 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuQuayLai_Click(object sender, EventArgs e)
+        {
+            fChucNang chucNang = new fChucNang();
+            this.Hide();
+            chucNang.ShowDialog();
+
+        }
+
+        private void menuThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult dg = MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

@@ -73,7 +73,7 @@
       <EntityTypeMapping TypeName="BaiTapLonModel.HoiNghiKhoaHoc">
         <MappingFragment StoreEntitySet="HoiNghiKhoaHoc">
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="FileDinhKem" ColumnName="FileDinhKem" />
+          <ScalarProperty Name="ThoGianDangBai" ColumnName="ThoGianDangBai" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="NguoiSoHuuId" ColumnName="NguoiSoHuuId" />
           <ScalarProperty Name="TenBaiBao" ColumnName="TenBaiBao" />

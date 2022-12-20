@@ -19,7 +19,7 @@ namespace QuanLyKhoaHoc.DbConnect
         public string TenBaiBao { get; set; }
         public int NguoiSoHuuId { get; set; }
         public int TrangThai { get; set; }
-        public string FileDinhKem { get; set; }
+        public Nullable<int> ThoGianDangBai { get; set; }
         public string MoTa { get; set; }
     
         public virtual TaiKhoan TaiKhoan { get; set; }

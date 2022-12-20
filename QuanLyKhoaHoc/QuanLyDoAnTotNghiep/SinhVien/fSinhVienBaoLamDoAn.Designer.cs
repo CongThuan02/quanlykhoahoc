@@ -1,6 +1,6 @@
-﻿namespace QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.CanBo
+﻿namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.SinhVien
 {
-    partial class fQuanLyCanBo
+    partial class fSinhVienBaoLamDoAn
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQuayLai = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -37,16 +43,15 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQuayLai = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuThoat = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMaBaiBao = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTenGiangVien = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -55,108 +60,15 @@
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTenBaiBao = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaBaiBao = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtTenGiangVien = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Location = new System.Drawing.Point(2, 222);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(796, 227);
-            this.panel3.TabIndex = 8;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.listView1);
-            this.groupBox2.Location = new System.Drawing.Point(1, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(795, 220);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh sách bài báo tại hội nghị khoa học của cán bộ, giảng viên";
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader2});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 20);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(789, 200);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Mã giảng viên";
-            this.columnHeader7.Width = 109;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Tên giảng viên";
-            this.columnHeader8.Width = 164;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Mã đề tài";
-            this.columnHeader9.Width = 119;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Tên đề tài";
-            this.columnHeader10.Width = 115;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Thời gian đăng ký";
-            this.columnHeader11.Width = 107;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mô tả";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.txtTimKiem);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 27);
-            this.panel1.TabIndex = 6;
             // 
             // btnTimKiem
             // 
@@ -166,13 +78,6 @@
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(257, 3);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(380, 20);
-            this.txtTimKiem.TabIndex = 2;
             // 
             // label1
             // 
@@ -214,13 +119,145 @@
             this.menuThoat.Size = new System.Drawing.Size(176, 22);
             this.menuThoat.Text = "Thoát chương trình";
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(3, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(796, 181);
-            this.panel2.TabIndex = 7;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.groupBox2);
+            this.panel3.Location = new System.Drawing.Point(2, 222);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(796, 227);
+            this.panel3.TabIndex = 8;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.listView1);
+            this.groupBox2.Location = new System.Drawing.Point(1, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(795, 220);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách bài báo tại hội nghị khoa học của cán bộ, giảng viên";
+            // 
+            // listView1
+            // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader2});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(3, 20);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(789, 200);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Mã sinh viên";
+            this.columnHeader7.Width = 109;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Tên sinh viên";
+            this.columnHeader8.Width = 164;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Mã đề tài";
+            this.columnHeader9.Width = 119;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Tên đề tài";
+            this.columnHeader10.Width = 115;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Thời gian đăng ký";
+            this.columnHeader11.Width = 107;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Giáo viên hướng dẫn";
+            this.columnHeader12.Width = 125;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Mô tả";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(257, 3);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(380, 20);
+            this.txtTimKiem.TabIndex = 2;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(225, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(380, 21);
+            this.comboBox1.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(105, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Mã đề tài";
+            // 
+            // txtMaBaiBao
+            // 
+            this.txtMaBaiBao.Location = new System.Drawing.Point(225, 71);
+            this.txtMaBaiBao.Name = "txtMaBaiBao";
+            this.txtMaBaiBao.Size = new System.Drawing.Size(380, 20);
+            this.txtMaBaiBao.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(105, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Tên sinh viên";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(105, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Mã sinh viên";
+            // 
+            // txtTenGiangVien
+            // 
+            this.txtTenGiangVien.Location = new System.Drawing.Point(225, 45);
+            this.txtTenGiangVien.Name = "txtTenGiangVien";
+            this.txtTenGiangVien.Size = new System.Drawing.Size(380, 20);
+            this.txtTenGiangVien.TabIndex = 15;
             // 
             // groupBox1
             // 
@@ -274,7 +311,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 126);
+            this.label2.Location = new System.Drawing.Point(105, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 4;
@@ -282,7 +319,7 @@
             // 
             // txtMoTa
             // 
-            this.txtMoTa.Location = new System.Drawing.Point(225, 123);
+            this.txtMoTa.Location = new System.Drawing.Point(225, 122);
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(380, 20);
             this.txtMoTa.TabIndex = 11;
@@ -303,56 +340,26 @@
             this.txtTenBaiBao.Size = new System.Drawing.Size(380, 20);
             this.txtTenBaiBao.TabIndex = 13;
             // 
-            // label4
+            // panel1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(105, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Mã đề tài";
+            this.panel1.Controls.Add(this.btnTimKiem);
+            this.panel1.Controls.Add(this.txtTimKiem);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(799, 27);
+            this.panel1.TabIndex = 6;
             // 
-            // txtMaBaiBao
+            // panel2
             // 
-            this.txtMaBaiBao.Location = new System.Drawing.Point(225, 71);
-            this.txtMaBaiBao.Name = "txtMaBaiBao";
-            this.txtMaBaiBao.Size = new System.Drawing.Size(380, 20);
-            this.txtMaBaiBao.TabIndex = 14;
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Location = new System.Drawing.Point(3, 35);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(796, 181);
+            this.panel2.TabIndex = 7;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(105, 48);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Tên giảng viên, cán bộ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Mã giảng viên, cán bộ";
-            // 
-            // txtTenGiangVien
-            // 
-            this.txtTenGiangVien.Location = new System.Drawing.Point(225, 45);
-            this.txtTenGiangVien.Name = "txtTenGiangVien";
-            this.txtTenGiangVien.Size = new System.Drawing.Size(380, 20);
-            this.txtTenGiangVien.TabIndex = 15;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(380, 21);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // fQuanLyCanBo
+            // fSinhVienBaoLamDoAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,23 +367,29 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "fQuanLyCanBo";
-            this.Text = "fQuanLyCanBo";
-            this.panel3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Name = "fSinhVienBaoLamDoAn";
+            this.Text = "fSinhVienBaoLamDoAn";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuQuayLai;
+        private System.Windows.Forms.ToolStripMenuItem menuThoat;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListView listView1;
@@ -386,16 +399,15 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuQuayLai;
-        private System.Windows.Forms.ToolStripMenuItem menuThoat;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtMaBaiBao;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTenGiangVien;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
@@ -404,11 +416,7 @@
         private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTenBaiBao;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaBaiBao;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTenGiangVien;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
