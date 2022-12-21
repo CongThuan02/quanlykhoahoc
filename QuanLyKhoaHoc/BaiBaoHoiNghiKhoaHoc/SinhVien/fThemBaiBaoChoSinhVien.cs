@@ -102,6 +102,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
                         txtMaBaiBao.Clear();
                         txtMoTa.Clear();
                         txttenBaiBao.Clear();
+                        txtNam.Clear();
                         fThemBaiBaoChoSinhVien_Load(sender, e);
                     }
                     else
@@ -185,6 +186,10 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Bạn không thể sửa mã bài báo ở đây");
             }
         }
 
