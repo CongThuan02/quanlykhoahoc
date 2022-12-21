@@ -202,7 +202,7 @@
             this.lsSinhVien.TabIndex = 0;
             this.lsSinhVien.UseCompatibleStateImageBehavior = false;
             this.lsSinhVien.View = System.Windows.Forms.View.Details;
-            this.lsSinhVien.SelectedIndexChanged += new System.EventHandler(this.lsSinhVien_SelectedIndexChanged);
+         
             this.lsSinhVien.Click += new System.EventHandler(this.lsSinhVien_Click);
             // 
             // columnHeader11

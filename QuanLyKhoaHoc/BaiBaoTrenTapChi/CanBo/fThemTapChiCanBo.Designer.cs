@@ -114,6 +114,7 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách bài báo tại hội nghị khoa học của cán bộ, giảng viên";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lsBaiBaoCanBo
             // 
@@ -135,6 +136,8 @@
             this.lsBaiBaoCanBo.TabIndex = 0;
             this.lsBaiBaoCanBo.UseCompatibleStateImageBehavior = false;
             this.lsBaiBaoCanBo.View = System.Windows.Forms.View.Details;
+            this.lsBaiBaoCanBo.SelectedIndexChanged += new System.EventHandler(this.lsBaiBaoCanBo_SelectedIndexChanged);
+            this.lsBaiBaoCanBo.Click += new System.EventHandler(this.lsBaiBaoCanBo_Click);
             // 
             // columnHeader12
             // 
@@ -155,6 +158,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(796, 227);
             this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // cbGiangVien
             // 
@@ -173,6 +177,7 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -182,6 +187,7 @@
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa ";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -201,6 +207,7 @@
             this.label6.Size = new System.Drawing.Size(29, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Năm";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -210,6 +217,7 @@
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mô tả";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtNam
             // 
@@ -217,6 +225,7 @@
             this.txtNam.Name = "txtNam";
             this.txtNam.Size = new System.Drawing.Size(184, 20);
             this.txtNam.TabIndex = 11;
+            this.txtNam.TextChanged += new System.EventHandler(this.txtNam_TextChanged);
             // 
             // panel1
             // 
@@ -228,6 +237,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(799, 27);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnTimKiem
             // 
@@ -237,6 +247,7 @@
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -244,6 +255,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(380, 20);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -253,6 +265,7 @@
             this.label1.Size = new System.Drawing.Size(126, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nhập tên bài báo cần tìm";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // menuStrip1
             // 
@@ -263,6 +276,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(799, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // menuToolStripMenuItem
             // 
@@ -272,18 +286,21 @@
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // menuQuayLai
             // 
             this.menuQuayLai.Name = "menuQuayLai";
             this.menuQuayLai.Size = new System.Drawing.Size(176, 22);
             this.menuQuayLai.Text = "Quay lại";
+            this.menuQuayLai.Click += new System.EventHandler(this.menuQuayLai_Click);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
             this.menuThoat.Size = new System.Drawing.Size(176, 22);
             this.menuThoat.Text = "Thoát chương trình";
+            this.menuThoat.Click += new System.EventHandler(this.menuThoat_Click);
             // 
             // txtMoTa
             // 
@@ -291,6 +308,7 @@
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(184, 20);
             this.txtMoTa.TabIndex = 11;
+            this.txtMoTa.TextChanged += new System.EventHandler(this.txtMoTa_TextChanged);
             // 
             // label5
             // 
@@ -300,6 +318,7 @@
             this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Tên bài báo";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtTenBaiBao
             // 
@@ -307,6 +326,7 @@
             this.txtTenBaiBao.Name = "txtTenBaiBao";
             this.txtTenBaiBao.Size = new System.Drawing.Size(184, 20);
             this.txtTenBaiBao.TabIndex = 13;
+            this.txtTenBaiBao.TextChanged += new System.EventHandler(this.txtTenBaiBao_TextChanged);
             // 
             // label4
             // 
@@ -316,6 +336,7 @@
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Mã bài báo";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtMaBaiBao
             // 
@@ -323,6 +344,7 @@
             this.txtMaBaiBao.Name = "txtMaBaiBao";
             this.txtMaBaiBao.Size = new System.Drawing.Size(184, 20);
             this.txtMaBaiBao.TabIndex = 14;
+            this.txtMaBaiBao.TextChanged += new System.EventHandler(this.txtMaBaiBao_TextChanged);
             // 
             // label7
             // 
@@ -332,6 +354,7 @@
             this.label7.Size = new System.Drawing.Size(78, 13);
             this.label7.TabIndex = 8;
             this.label7.Text = "Tên giảng viên";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label3
             // 
@@ -349,6 +372,7 @@
             this.txtTenGiangVien.Name = "txtTenGiangVien";
             this.txtTenGiangVien.Size = new System.Drawing.Size(184, 20);
             this.txtTenGiangVien.TabIndex = 15;
+            this.txtTenGiangVien.TextChanged += new System.EventHandler(this.txtTenGiangVien_TextChanged);
             // 
             // groupBox1
             // 
@@ -375,6 +399,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm Bài báo";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label8
             // 
@@ -384,6 +409,7 @@
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Quốc gia";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtQuocGia
             // 
@@ -400,6 +426,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(796, 181);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // fThemTapChiCanBo
             // 

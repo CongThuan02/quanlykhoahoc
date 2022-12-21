@@ -193,7 +193,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
             }
         }
 
-        private async void lsSinhVien_SelectedIndexChanged(object sender, EventArgs e)
+        private async void lsSinhVien_SelectedIndex(object sender, EventArgs e)
         {
 
           
