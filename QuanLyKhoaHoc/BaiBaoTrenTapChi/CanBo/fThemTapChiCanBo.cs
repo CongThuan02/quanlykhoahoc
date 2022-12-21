@@ -83,25 +83,7 @@ LoadingData()
         }
 
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            string maBaiBao = txtMaBaiBao.Text;
-            string tenBaiBao = txtTenBaiBao.Text;
-            string moTa = txtMoTa.Text;
-            string nam = txtNam.Text;
-            string quocGia = txtQuocGia.Text;
-            var _maTaiKhoan = cbGiangVien.SelectedItem;
-            var _maCanBo = cbGiangVien.SelectedItem;
-            txtTenGiangVien.Text = _maTaiKhoan.GetType()
-                .GetProperty("maCanBo")
-                .GetValue(_maTaiKhoan, null)
-                .ToString();
-
-            var id = await _context.TaiKhoans.Where(x => x.MaTaiKhoan.Equals(_maTaiKhoan)).Select(x => x.Id).FirstOrDefaultAsync();
-            var idBaiBao = await _context.HoiNghiKhoaHocs.Where(x => x.MaBaiBao.Equals(_maBaiBao)).Select(x => x.MaBaiBao).FirstOrDefaultAsync();
-        }
-
-
+        
 
 
 
@@ -182,6 +164,9 @@ LoadingData()
 
         }
 
-      
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
