@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="74e18c4759ed4a928e233fc0fe184ee1" Name="Diagram1">
-        <EntityTypeShape EntityType="BaiTapLonModel.BaiBao" Width="1.5" PointX="3" PointY="15.25" />
-        <EntityTypeShape EntityType="BaiTapLonModel.DoAnTotNghiep" Width="1.5" PointX="3" PointY="18.5" />
+      <Diagram DiagramId="74e18c4759ed4a928e233fc0fe184ee1" Name="Diagram1" ZoomLevel="79">
+        <EntityTypeShape EntityType="BaiTapLonModel.BaiBao" Width="1.5" PointX="9.5" PointY="3.25" />
+        <EntityTypeShape EntityType="BaiTapLonModel.DoAnTotNghiep" Width="1.5" PointX="9.75" PointY="7.875" />
         <EntityTypeShape EntityType="BaiTapLonModel.GiangVien" Width="1.5" PointX="3" PointY="3.5" />
         <EntityTypeShape EntityType="BaiTapLonModel.HoiNghiKhoaHoc" Width="1.5" PointX="3" PointY="8.875" />
         <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocCanBo" Width="1.5" PointX="5.25" PointY="1.625" />

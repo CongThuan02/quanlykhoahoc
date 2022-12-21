@@ -83,6 +83,7 @@
             this.btnTimKiem.TabIndex = 0;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // button1
             // 
@@ -165,6 +166,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "fXemToanBoBaiBaoTrenTapChi";
             this.Text = "fXemToanBoBaiBaoTrenTapChi";
+            this.Load += new System.EventHandler(this.fXemToanBoBaiBaoTrenTapChi_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

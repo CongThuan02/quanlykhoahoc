@@ -41,6 +41,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -127,7 +128,8 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader5,
+            this.columnHeader6});
             this.lsDanhSach.FullRowSelect = true;
             this.lsDanhSach.HideSelection = false;
             this.lsDanhSach.Location = new System.Drawing.Point(5, 21);
@@ -144,28 +146,32 @@
             // 
             // MaBaiBao
             // 
-            this.MaBaiBao.Text = "Mã bài báo";
+            this.MaBaiBao.Text = "Mã Tài Khoản";
             this.MaBaiBao.Width = 78;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Tên bài báo";
+            this.columnHeader2.Text = "Tên tài khoản";
             this.columnHeader2.Width = 111;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Chủ Bài báo";
+            this.columnHeader3.Text = "Mã bài báo";
             this.columnHeader3.Width = 120;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Thời gian đăng bài";
+            this.columnHeader4.Text = "Tên bài báo";
             this.columnHeader4.Width = 116;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Mô tả";
+            this.columnHeader5.Text = "Mô Tả";
             this.columnHeader5.Width = 201;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Năm";
             // 
             // fXemToanBoHoiNghiKhoaHoc
             // 
@@ -200,5 +206,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

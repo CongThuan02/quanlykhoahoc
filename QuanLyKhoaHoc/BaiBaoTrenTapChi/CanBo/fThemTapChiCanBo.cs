@@ -192,6 +192,10 @@ namespace QuanLyKhoaHoc.BaiBaoTrenTapChi.CanBo
             }
 
         }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            LoadingData();
+        }
 
         private async Task lsBaiBaoCanBo_SelectedIndexChangedAsync(object sender, EventArgs e)
         {
@@ -255,10 +259,7 @@ namespace QuanLyKhoaHoc.BaiBaoTrenTapChi.CanBo
 
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
