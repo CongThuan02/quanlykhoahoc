@@ -42,10 +42,5 @@ namespace QuanLyKhoaHoc.DbConnect
         public virtual ICollection<HoiNghiKhoaHoc> HoiNghiKhoaHocs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SinhVien> SinhViens { get; set; }
-
-        public static implicit operator int(TaiKhoan v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

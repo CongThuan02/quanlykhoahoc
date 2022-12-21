@@ -126,6 +126,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
                         txtMaBaiBao.Clear();
                         txtMoTa.Clear();
                         txtTenBaiBao.Clear();
+                        txtNam.Clear();
                         fThemBaiBaoCanBo_Load(sender, e);
                     }
                     else
@@ -229,6 +230,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             txtMaBaiBao.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[3].Text;
             txtTenBaiBao.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[4].Text;
             txtMoTa.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[5].Text;
+            txtNam.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[6].Text;
            
         }
 
