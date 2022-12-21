@@ -13,10 +13,8 @@
           <Property Name="MaBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="TenBaiBao" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="TaiKhoanId" Type="int" Nullable="false" />
-          <Property Name="TrangThai" Type="int" Nullable="false" />
-          <Property Name="FileDinhKem" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="UrlBaiBao" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Nam" Type="int" Nullable="false" />
           <Property Name="QuocGia" Type="nvarchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="DoAnTotNghiep">
@@ -344,31 +342,31 @@
       <Schema Namespace="BaiTapLonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="QuanLyKhoaHocEntities" annotation:LazyLoadingEnabled="true">
           <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BaiTapLonModel.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BaiTapLonModel.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
+          <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
@@ -444,10 +442,8 @@
           <Property Name="MaBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TenBaiBao" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="TaiKhoanId" Type="Int32" Nullable="false" />
-          <Property Name="TrangThai" Type="Int32" Nullable="false" />
-          <Property Name="FileDinhKem" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="MoTa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="UrlBaiBao" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Nam" Type="Int32" Nullable="false" />
           <Property Name="QuocGia" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_BaiBao_TaiKhoan" FromRole="BaiBao" ToRole="TaiKhoan" />
         </EntityType>
@@ -739,10 +735,8 @@
             <EntityTypeMapping TypeName="BaiTapLonModel.BaiBao">
               <MappingFragment StoreEntitySet="BaiBao">
                 <ScalarProperty Name="QuocGia" ColumnName="QuocGia" />
-                <ScalarProperty Name="UrlBaiBao" ColumnName="UrlBaiBao" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="FileDinhKem" ColumnName="FileDinhKem" />
-                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="TaiKhoanId" ColumnName="TaiKhoanId" />
                 <ScalarProperty Name="TenBaiBao" ColumnName="TenBaiBao" />
                 <ScalarProperty Name="MaBaiBao" ColumnName="MaBaiBao" />

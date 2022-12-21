@@ -27,3 +27,4 @@ E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyDoAnTotNghiep.fXemDoAnTotNghiep.resources
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyDoAnTotNghiep.SinhVien.fSinhVienBaoLamDoAn.resources
 E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.fXemNhienCuuKhoaHoc.resources
+E:\quanlykhoahoc\QuanLyKhoaHoc\obj\Debug\QuanLyKhoaHoc.BaiBaoTrenTapChi.CanBo.fThemTapChiCanBo.resources

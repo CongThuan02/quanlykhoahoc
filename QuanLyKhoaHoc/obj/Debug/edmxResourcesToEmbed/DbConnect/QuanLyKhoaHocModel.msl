@@ -29,10 +29,8 @@
       <EntityTypeMapping TypeName="BaiTapLonModel.BaiBao">
         <MappingFragment StoreEntitySet="BaiBao">
           <ScalarProperty Name="QuocGia" ColumnName="QuocGia" />
-          <ScalarProperty Name="UrlBaiBao" ColumnName="UrlBaiBao" />
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="FileDinhKem" ColumnName="FileDinhKem" />
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="TaiKhoanId" ColumnName="TaiKhoanId" />
           <ScalarProperty Name="TenBaiBao" ColumnName="TenBaiBao" />
           <ScalarProperty Name="MaBaiBao" ColumnName="MaBaiBao" />
