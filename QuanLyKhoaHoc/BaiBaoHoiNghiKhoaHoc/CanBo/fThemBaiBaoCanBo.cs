@@ -123,6 +123,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
                         _context.HoiNghiKhoaHocs.Add(hoiNghiKhoaHocCanBo);
                         await _context.SaveChangesAsync();
                         MessageBox.Show("Thêm bài báo thành công");
+                        cbGiangVien.Items.Clear();
                         txtMaBaiBao.Clear();
                         txtMoTa.Clear();
                         txtTenBaiBao.Clear();
@@ -239,6 +240,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             var _maBaiBao = txtMaBaiBao.Text;
             var _tenBaiBao = txtTenBaiBao.Text;
             var _moTa = txtMoTa.Text;
+            var _nam= txtNam.Text;
             //MessageBox.Show(_moTa);
             var result = await _context.HoiNghiKhoaHocs.Where(x => x.MaBaiBao.Equals(_maBaiBao)).FirstOrDefaultAsync();
             if (result != null)
@@ -247,9 +249,11 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
                 {
                     result.MoTa = _moTa;
                     result.TenBaiBao = _tenBaiBao;
+                    result.Nam = int.Parse(_nam);
                   
                     _context.Entry(result).State = EntityState.Modified;
                     _context.SaveChanges();
+                    MessageBox.Show("Sửa bài báo thành công");
                     fThemBaiBaoCanBo_Load(sender, e);
 
                 }

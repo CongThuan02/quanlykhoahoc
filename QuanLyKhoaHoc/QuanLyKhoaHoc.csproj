@@ -211,6 +211,9 @@
     <EmbeddedResource Include="BaiBaoHoiNghiKhoaHoc\SinhVien\fThemBaiBaoChoSinhVien.resx">
       <DependentUpon>fThemBaiBaoChoSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaiBaoTrenTapChi\CanBo\fThemTapChiCanBo.resx">
+      <DependentUpon>fThemTapChiCanBo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaiBaoTrenTapChi\fXemToanBoBaiBaoTrenTapChi.resx">
       <DependentUpon>fXemToanBoBaiBaoTrenTapChi.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,10 +8,8 @@
     <Property Name="MaBaiBao" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="TenBaiBao" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="TaiKhoanId" Type="int" Nullable="false" />
-    <Property Name="TrangThai" Type="int" Nullable="false" />
-    <Property Name="FileDinhKem" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="UrlBaiBao" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Nam" Type="int" Nullable="false" />
     <Property Name="QuocGia" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="DoAnTotNghiep">

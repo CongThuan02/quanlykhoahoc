@@ -102,10 +102,8 @@
     <Property Name="MaBaiBao" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TenBaiBao" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="TaiKhoanId" Type="Int32" Nullable="false" />
-    <Property Name="TrangThai" Type="Int32" Nullable="false" />
-    <Property Name="FileDinhKem" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="MoTa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="UrlBaiBao" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Nam" Type="Int32" Nullable="false" />
     <Property Name="QuocGia" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_BaiBao_TaiKhoan" FromRole="BaiBao" ToRole="TaiKhoan" />
   </EntityType>

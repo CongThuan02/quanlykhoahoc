@@ -362,13 +362,14 @@
             // menuQuayLai
             // 
             this.menuQuayLai.Name = "menuQuayLai";
-            this.menuQuayLai.Size = new System.Drawing.Size(176, 22);
+            this.menuQuayLai.Size = new System.Drawing.Size(180, 22);
             this.menuQuayLai.Text = "Quay lại";
+            this.menuQuayLai.Click += new System.EventHandler(this.menuQuayLai_Click);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
-            this.menuThoat.Size = new System.Drawing.Size(176, 22);
+            this.menuThoat.Size = new System.Drawing.Size(180, 22);
             this.menuThoat.Text = "Thoát chương trình";
             // 
             // fThemBaiBaoChoSinhVien
