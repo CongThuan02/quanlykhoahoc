@@ -42,6 +42,8 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -93,9 +95,13 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "<";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lsTapChi);
             this.groupBox1.Location = new System.Drawing.Point(7, 79);
             this.groupBox1.Name = "groupBox1";
@@ -106,6 +112,9 @@
             // 
             // lsTapChi
             // 
+            this.lsTapChi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsTapChi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.MaBaiBao,
@@ -113,7 +122,9 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
             this.lsTapChi.HideSelection = false;
             this.lsTapChi.Location = new System.Drawing.Point(5, 21);
             this.lsTapChi.Name = "lsTapChi";
@@ -129,22 +140,22 @@
             // 
             // MaBaiBao
             // 
-            this.MaBaiBao.Text = "Mã bài báo";
+            this.MaBaiBao.Text = "Mã tài khoản";
             this.MaBaiBao.Width = 78;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Tên bài báo";
+            this.columnHeader2.Text = "Họ tên người sở hữu";
             this.columnHeader2.Width = 111;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Chủ Bài báo";
+            this.columnHeader3.Text = "Mã bài báo";
             this.columnHeader3.Width = 120;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Thời gian đăng bài";
+            this.columnHeader4.Text = "Tên bài báo";
             this.columnHeader4.Width = 116;
             // 
             // columnHeader5
@@ -156,6 +167,14 @@
             // 
             this.columnHeader6.Text = "Quốc gia";
             this.columnHeader6.Width = 87;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Năm đăng bài";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Loại tài khoản";
             // 
             // fXemToanBoBaiBaoTrenTapChi
             // 
@@ -190,5 +209,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

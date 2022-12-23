@@ -41,7 +41,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbKhoaHoc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -165,21 +164,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bài báo tại hội nghị khoa học";
             // 
-            // cbKhoaHoc
-            // 
-            this.cbKhoaHoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbKhoaHoc.FormattingEnabled = true;
-            this.cbKhoaHoc.Items.AddRange(new object[] {
-            "Toàn bộ",
-            "Sinh viên",
-            "Cán bộ, Giảng viên"});
-            this.cbKhoaHoc.Location = new System.Drawing.Point(694, 52);
-            this.cbKhoaHoc.Name = "cbKhoaHoc";
-            this.cbKhoaHoc.Size = new System.Drawing.Size(100, 21);
-            this.cbKhoaHoc.TabIndex = 5;
-            this.cbKhoaHoc.Text = "Toàn bộ";
-            // 
             // fXemDoAnTotNghiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,7 +171,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cbKhoaHoc);
             this.Name = "fXemDoAnTotNghiep";
             this.Text = "fXemDoAnTotNghiep";
             this.panel1.ResumeLayout(false);
@@ -212,6 +195,5 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbKhoaHoc;
     }
 }

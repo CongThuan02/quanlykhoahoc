@@ -215,5 +215,17 @@ namespace QuanLyKhoaHoc.BaiBaoTrenTapChi.SinhVien
             txtNam.Text = lsBaiBaoSV.SelectedItems[0].SubItems[6].Text;
             txtQuocGia.Text = lsBaiBaoSV.SelectedItems[0].SubItems[7].Text;
         }
+
+        private void menuQuayLai_Click(object sender, EventArgs e)
+        {
+            fChucNang  back = new fChucNang();
+            this.Hide();
+            back.ShowDialog();
+        }
+
+        private void menuThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -283,12 +283,14 @@ namespace QuanLyKhoaHoc.BaiBaoTrenTapChi.CanBo
 
         private void menuQuayLai_Click(object sender, EventArgs e)
         {
-
+            fChucNang back =new fChucNang();
+            this.Hide();
+            back.ShowDialog();
         }
 
         private void menuThoat_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void txtMoTa_TextChanged(object sender, EventArgs e)

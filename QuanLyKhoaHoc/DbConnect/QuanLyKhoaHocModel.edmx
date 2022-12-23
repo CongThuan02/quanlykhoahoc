@@ -24,12 +24,9 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaDeTai" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="TenDeTai" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="ThoiGianDanKy" Type="date" Nullable="false" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="FileDinhKem" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="GhiChu" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="GiangVienHuongDanId" Type="int" Nullable="false" />
-          <Property Name="TrangThai" Type="bit" Nullable="false" />
           <Property Name="NamHoc" Type="int" Nullable="false" />
           <Property Name="HocKy" Type="int" Nullable="false" />
         </EntityType>
@@ -141,6 +138,18 @@
             </Principal>
             <Dependent Role="BaiBao">
               <PropertyRef Name="TaiKhoanId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DoAnTotNghiep_GiangVien">
+          <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="1" />
+          <End Role="DoAnTotNghiep" Type="Self.DoAnTotNghiep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GiangVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DoAnTotNghiep">
+              <PropertyRef Name="GiangVienHuongDanId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -299,6 +308,10 @@
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="BaiBao" EntitySet="BaiBao" />
           </AssociationSet>
+          <AssociationSet Name="FK_DoAnTotNghiep_GiangVien" Association="Self.FK_DoAnTotNghiep_GiangVien">
+            <End Role="GiangVien" EntitySet="GiangVien" />
+            <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghiep" />
+          </AssociationSet>
           <AssociationSet Name="FK_GiangVien_TaiKhoan" Association="Self.FK_GiangVien_TaiKhoan">
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="GiangVien" EntitySet="GiangVien" />
@@ -342,31 +355,31 @@
       <Schema Namespace="BaiTapLonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="QuanLyKhoaHocEntities" annotation:LazyLoadingEnabled="true">
           <FunctionImport Name="sp_alterdiagram">
-          <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="sp_creatediagram">
-          <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
           </FunctionImport>
           <FunctionImport Name="sp_dropdiagram">
-          <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BaiTapLonModel.sp_helpdiagramdefinition_Result)">
-          <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BaiTapLonModel.sp_helpdiagrams_Result)">
-          <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_renamediagram">
-          <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
@@ -385,6 +398,10 @@
           <AssociationSet Name="FK_BaiBao_TaiKhoan" Association="BaiTapLonModel.FK_BaiBao_TaiKhoan">
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="BaiBao" EntitySet="BaiBaos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoAnTotNghiep_GiangVien" Association="BaiTapLonModel.FK_DoAnTotNghiep_GiangVien">
+            <End Role="GiangVien" EntitySet="GiangViens" />
+            <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghieps" />
           </AssociationSet>
           <AssociationSet Name="FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" Association="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep">
             <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghieps" />
@@ -454,14 +471,12 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaDeTai" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TenDeTai" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="ThoiGianDanKy" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="MoTa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="FileDinhKem" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="GhiChu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="GiangVienHuongDanId" Type="Int32" Nullable="false" />
-          <Property Name="TrangThai" Type="Boolean" Nullable="false" />
           <Property Name="NamHoc" Type="Int32" Nullable="false" />
           <Property Name="HocKy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="GiangVien" Relationship="BaiTapLonModel.FK_DoAnTotNghiep_GiangVien" FromRole="DoAnTotNghiep" ToRole="GiangVien" />
           <NavigationProperty Name="SinhVien_DoAnTotNghiep" Relationship="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" FromRole="DoAnTotNghiep" ToRole="SinhVien_DoAnTotNghiep" />
         </EntityType>
         <EntityType Name="GiangVien">
@@ -474,6 +489,7 @@
           <Property Name="HocHam" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="HocVi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="BoMon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DoAnTotNghieps" Relationship="BaiTapLonModel.FK_DoAnTotNghiep_GiangVien" FromRole="GiangVien" ToRole="DoAnTotNghiep" />
           <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_GiangVien_TaiKhoan" FromRole="GiangVien" ToRole="TaiKhoan" />
           <NavigationProperty Name="NghienCuuKhoaHocCanBoes" Relationship="BaiTapLonModel.FK_NghienCuuKhoaHocCanBo_GiangVien" FromRole="GiangVien" ToRole="NghienCuuKhoaHocCanBo" />
           <NavigationProperty Name="NghienCuuKhoaHocSinhViens" Relationship="BaiTapLonModel.FK_NghienCuuKhoaHocSinhVien_GiangVien" FromRole="GiangVien" ToRole="NghienCuuKhoaHocSinhVien" />
@@ -590,6 +606,18 @@
             </Principal>
             <Dependent Role="BaiBao">
               <PropertyRef Name="TaiKhoanId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DoAnTotNghiep_GiangVien">
+          <End Type="BaiTapLonModel.GiangVien" Role="GiangVien" Multiplicity="1" />
+          <End Type="BaiTapLonModel.DoAnTotNghiep" Role="DoAnTotNghiep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GiangVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DoAnTotNghiep">
+              <PropertyRef Name="GiangVienHuongDanId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -749,12 +777,9 @@
               <MappingFragment StoreEntitySet="DoAnTotNghiep">
                 <ScalarProperty Name="HocKy" ColumnName="HocKy" />
                 <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
-                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="GiangVienHuongDanId" ColumnName="GiangVienHuongDanId" />
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-                <ScalarProperty Name="FileDinhKem" ColumnName="FileDinhKem" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="ThoiGianDanKy" ColumnName="ThoiGianDanKy" />
                 <ScalarProperty Name="TenDeTai" ColumnName="TenDeTai" />
                 <ScalarProperty Name="MaDeTai" ColumnName="MaDeTai" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

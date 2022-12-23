@@ -124,14 +124,16 @@
             // menuQuayLai
             // 
             this.menuQuayLai.Name = "menuQuayLai";
-            this.menuQuayLai.Size = new System.Drawing.Size(176, 22);
+            this.menuQuayLai.Size = new System.Drawing.Size(180, 22);
             this.menuQuayLai.Text = "Quay lại";
+            this.menuQuayLai.Click += new System.EventHandler(this.menuQuayLai_Click);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
-            this.menuThoat.Size = new System.Drawing.Size(176, 22);
+            this.menuThoat.Size = new System.Drawing.Size(180, 22);
             this.menuThoat.Text = "Thoát chương trình";
+            this.menuThoat.Click += new System.EventHandler(this.menuThoat_Click);
             // 
             // txtMoTa
             // 
@@ -192,12 +194,12 @@
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Mã giảng viên";
+            this.columnHeader7.Text = "Mã sinh viên";
             this.columnHeader7.Width = 109;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Tên Giảng viên";
+            this.columnHeader8.Text = "Họ tên sinh viên";
             this.columnHeader8.Width = 164;
             // 
             // columnHeader9

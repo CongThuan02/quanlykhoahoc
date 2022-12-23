@@ -48,8 +48,9 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
                     baiBao.SubItems.Add(item.TenSinhVien);
                     baiBao.SubItems.Add(item.MaBaiBao);
                     baiBao.SubItems.Add(item.TenBaiBao);
-                    baiBao.SubItems.Add(item.NoiDungBaiBao);
                     baiBao.SubItems.Add(item.Nam.ToString());
+
+                    baiBao.SubItems.Add(item.NoiDungBaiBao);
 
                     lsSinhVien.Items.Add(baiBao);
                     index++;
@@ -165,7 +166,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
         {
             var _maBaiBao = txtMaBaiBao.Text;
             var _tenBaiBao = txttenBaiBao.Text;
-            
+            var _nam = txtNam.Text; 
             var _moTa = txtMoTa.Text;
            
             var result = await _context.HoiNghiKhoaHocs.Where(x => x.MaBaiBao.Equals(_maBaiBao)).FirstOrDefaultAsync();
@@ -175,7 +176,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
                 {
                     result.MoTa = _moTa;
                     result.TenBaiBao = _tenBaiBao;
-
+                    result.Nam = int.Parse(_nam);
                     _context.Entry(result).State = EntityState.Modified;
                     _context.SaveChanges();
                     MessageBox.Show("sửa bài báo thành công");
@@ -218,6 +219,18 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
         private async  void btnTimKiem_Click(object sender, EventArgs e)
         {
             await LoadingData();
+        }
+
+        private void lsSinhVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuQuayLai_Click(object sender, EventArgs e)
+        {
+            fChucNang back = new fChucNang();
+            this.Hide();
+            back.ShowDialog();
         }
     }
 }

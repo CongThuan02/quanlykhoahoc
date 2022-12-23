@@ -34,6 +34,7 @@ namespace QuanLyKhoaHoc.BaiBaoTrenTapChi
                           noiDungBaiBao = baibaotapchi.MoTa,
                           namBaiBao = baibaotapchi.Nam,
                           quocGia = baibaotapchi.QuocGia,
+                          loaiTaiKhoan = taiKhoan.LoaiTaiKhoan
                       };
             var data = await sql.ToListAsync();
             lsTapChi.Items.Clear();
@@ -46,8 +47,17 @@ namespace QuanLyKhoaHoc.BaiBaoTrenTapChi
                 baiBao.SubItems.Add(item.maBaiBao);
                 baiBao.SubItems.Add(item.tenBaiBao);
                 baiBao.SubItems.Add(item.noiDungBaiBao);
-                baiBao.SubItems.Add(item.namBaiBao.ToString());
                 baiBao.SubItems.Add(item.quocGia);
+                baiBao.SubItems.Add(item.namBaiBao.ToString());
+                if(item.loaiTaiKhoan==0)
+                {
+                    baiBao.SubItems.Add("Giảng Viên");
+                }
+                else
+                {
+                    baiBao.SubItems.Add("Sinh Viên");
+                }
+                
                 lsTapChi.Items.Add(baiBao);
                 index++;
 
@@ -62,6 +72,13 @@ namespace QuanLyKhoaHoc.BaiBaoTrenTapChi
         private async void btnTimKiem_Click(object sender, EventArgs e)
         {
             await LoadingData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fChucNang  back = new fChucNang();
+            this.Hide();
+            back.ShowDialog();
         }
     }
 }

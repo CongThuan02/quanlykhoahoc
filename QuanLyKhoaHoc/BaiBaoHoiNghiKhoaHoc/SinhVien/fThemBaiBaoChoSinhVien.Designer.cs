@@ -202,7 +202,7 @@
             this.lsSinhVien.TabIndex = 0;
             this.lsSinhVien.UseCompatibleStateImageBehavior = false;
             this.lsSinhVien.View = System.Windows.Forms.View.Details;
-         
+            this.lsSinhVien.SelectedIndexChanged += new System.EventHandler(this.lsSinhVien_SelectedIndexChanged);
             this.lsSinhVien.Click += new System.EventHandler(this.lsSinhVien_Click);
             // 
             // columnHeader11
@@ -362,13 +362,14 @@
             // menuQuayLai
             // 
             this.menuQuayLai.Name = "menuQuayLai";
-            this.menuQuayLai.Size = new System.Drawing.Size(176, 22);
+            this.menuQuayLai.Size = new System.Drawing.Size(180, 22);
             this.menuQuayLai.Text = "Quay lại";
+            this.menuQuayLai.Click += new System.EventHandler(this.menuQuayLai_Click);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
-            this.menuThoat.Size = new System.Drawing.Size(176, 22);
+            this.menuThoat.Size = new System.Drawing.Size(180, 22);
             this.menuThoat.Text = "Thoát chương trình";
             // 
             // fThemBaiBaoChoSinhVien
