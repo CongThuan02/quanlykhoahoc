@@ -79,10 +79,7 @@
     <EntitySetMapping Name="NghienCuuKhoaHocCanBoes">
       <EntityTypeMapping TypeName="BaiTapLonModel.NghienCuuKhoaHocCanBo">
         <MappingFragment StoreEntitySet="NghienCuuKhoaHocCanBo">
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="GiangVienDangKyId" ColumnName="GiangVienDangKyId" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-          <ScalarProperty Name="FileDinhKem" ColumnName="FileDinhKem" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
           <ScalarProperty Name="TenDeTai" ColumnName="TenDeTai" />
           <ScalarProperty Name="MaDeTai" ColumnName="MaDeTai" />
@@ -93,10 +90,8 @@
     <EntitySetMapping Name="NghienCuuKhoaHocSinhViens">
       <EntityTypeMapping TypeName="BaiTapLonModel.NghienCuuKhoaHocSinhVien">
         <MappingFragment StoreEntitySet="NghienCuuKhoaHocSinhVien">
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="SinhVienId" ColumnName="SinhVienId" />
           <ScalarProperty Name="GiangVienHuongDanId" ColumnName="GiangVienHuongDanId" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-          <ScalarProperty Name="FileDinhKem" ColumnName="FileDinhKem" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
           <ScalarProperty Name="TenDeTai" ColumnName="TenDeTai" />
           <ScalarProperty Name="MaDeTai" ColumnName="MaDeTai" />
@@ -111,15 +106,6 @@
           <ScalarProperty Name="TenLop" ColumnName="TenLop" />
           <ScalarProperty Name="MaLop" ColumnName="MaLop" />
           <ScalarProperty Name="TaiKhoanId" ColumnName="TaiKhoanId" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SinhVien_HKSV">
-      <EntityTypeMapping TypeName="BaiTapLonModel.SinhVien_HKSV">
-        <MappingFragment StoreEntitySet="SinhVien_HKSV">
-          <ScalarProperty Name="SinhVienId" ColumnName="SinhVienId" />
-          <ScalarProperty Name="NghienCuuKhoaHocSinhVienId" ColumnName="NghienCuuKhoaHocSinhVienId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

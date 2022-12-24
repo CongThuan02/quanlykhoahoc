@@ -8,6 +8,8 @@ using QuanLyKhoaHoc.BaiBaoTrenTapChi.SinhVien;
 using QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc;
 using QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.CanBo;
 using QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.SinhVien;
+using QuanLyKhoaHoc.QuanLyDoAnTotNghiep.SinhVien;
+using QuanLyKhoaHoc.QuanLyDoAnTotNghiep;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,9 +94,7 @@ namespace QuanLyKhoaHoc
 
         private void btnDeTaiNhienCuuKhoaHoc_Click(object sender, EventArgs e)
         {
-            fQuanLyNhienCuuKhoaHoc _views = new fQuanLyNhienCuuKhoaHoc();
-            this.Hide();
-            _views.ShowDialog();
+          
         }
 
         private void btnDanhSachNhienCuuKhoaHocGiaoVien_Click(object sender, EventArgs e)
@@ -114,6 +114,20 @@ namespace QuanLyKhoaHoc
         private void btnDanhSachGiangVienHuongDan_Click(object sender, EventArgs e)
         {
             fGiangVienHD show = new fGiangVienHD();
+            this.Hide();
+            show.ShowDialog();
+        }
+
+        private void btnDanhSachSinhVienBaoVe_Click(object sender, EventArgs e)
+        {
+            fSinhVienBaoLamDoAn show = new fSinhVienBaoLamDoAn();
+            this.Hide();
+            show.ShowDialog();
+        }
+
+        private void btnXemDanhSachDoAnTotNghiep_Click(object sender, EventArgs e)
+        {
+            fXemDoAnTotNghiep show = new fXemDoAnTotNghiep();
             this.Hide();
             show.ShowDialog();
         }

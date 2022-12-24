@@ -38,7 +38,6 @@
     <EntitySet Name="NghienCuuKhoaHocCanBoes" EntityType="BaiTapLonModel.NghienCuuKhoaHocCanBo" />
     <EntitySet Name="NghienCuuKhoaHocSinhViens" EntityType="BaiTapLonModel.NghienCuuKhoaHocSinhVien" />
     <EntitySet Name="SinhViens" EntityType="BaiTapLonModel.SinhVien" />
-    <EntitySet Name="SinhVien_HKSV" EntityType="BaiTapLonModel.SinhVien_HKSV" />
     <EntitySet Name="sysdiagrams" EntityType="BaiTapLonModel.sysdiagram" />
     <EntitySet Name="TaiKhoans" EntityType="BaiTapLonModel.TaiKhoan" />
     <AssociationSet Name="FK_BaiBao_TaiKhoan" Association="BaiTapLonModel.FK_BaiBao_TaiKhoan">
@@ -69,13 +68,9 @@
       <End Role="TaiKhoan" EntitySet="TaiKhoans" />
       <End Role="HoiNghiKhoaHoc" EntitySet="HoiNghiKhoaHocs" />
     </AssociationSet>
-    <AssociationSet Name="FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" Association="BaiTapLonModel.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien">
-      <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhViens" />
-      <End Role="SinhVien_HKSV" EntitySet="SinhVien_HKSV" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SinhVien_HKSV_SinhVien" Association="BaiTapLonModel.FK_SinhVien_HKSV_SinhVien">
+    <AssociationSet Name="FK_NghienCuuKhoaHocSinhVien_SinhVien" Association="BaiTapLonModel.FK_NghienCuuKhoaHocSinhVien_SinhVien">
       <End Role="SinhVien" EntitySet="SinhViens" />
-      <End Role="SinhVien_HKSV" EntitySet="SinhVien_HKSV" />
+      <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhViens" />
     </AssociationSet>
     <AssociationSet Name="FK_SinhVien_TaiKhoan" Association="BaiTapLonModel.FK_SinhVien_TaiKhoan">
       <End Role="TaiKhoan" EntitySet="TaiKhoans" />
@@ -156,10 +151,7 @@
     <Property Name="MaDeTai" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TenDeTai" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="MoTa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="FileDinhKem" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="GhiChu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="GiangVienDangKyId" Type="Int32" Nullable="false" />
-    <Property Name="TrangThai" Type="Int32" Nullable="false" />
     <NavigationProperty Name="GiangVien" Relationship="BaiTapLonModel.FK_NghienCuuKhoaHocCanBo_GiangVien" FromRole="NghienCuuKhoaHocCanBo" ToRole="GiangVien" />
   </EntityType>
   <EntityType Name="NghienCuuKhoaHocSinhVien">
@@ -170,12 +162,10 @@
     <Property Name="MaDeTai" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TenDeTai" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="MoTa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="FileDinhKem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="GiangVienHuongDanId" Type="Int32" Nullable="false" />
-    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <Property Name="SinhVienId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="GiangVien" Relationship="BaiTapLonModel.FK_NghienCuuKhoaHocSinhVien_GiangVien" FromRole="NghienCuuKhoaHocSinhVien" ToRole="GiangVien" />
-    <NavigationProperty Name="SinhVien_HKSV" Relationship="BaiTapLonModel.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" FromRole="NghienCuuKhoaHocSinhVien" ToRole="SinhVien_HKSV" />
+    <NavigationProperty Name="SinhVien" Relationship="BaiTapLonModel.FK_NghienCuuKhoaHocSinhVien_SinhVien" FromRole="NghienCuuKhoaHocSinhVien" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="SinhVien">
     <Key>
@@ -187,18 +177,8 @@
     <Property Name="TenLop" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="BoMon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="DoAnTotNghieps" Relationship="BaiTapLonModel.FK_DoAnTotNghiep_SinhVien" FromRole="SinhVien" ToRole="DoAnTotNghiep" />
-    <NavigationProperty Name="SinhVien_HKSV" Relationship="BaiTapLonModel.FK_SinhVien_HKSV_SinhVien" FromRole="SinhVien" ToRole="SinhVien_HKSV" />
+    <NavigationProperty Name="NghienCuuKhoaHocSinhViens" Relationship="BaiTapLonModel.FK_NghienCuuKhoaHocSinhVien_SinhVien" FromRole="SinhVien" ToRole="NghienCuuKhoaHocSinhVien" />
     <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_SinhVien_TaiKhoan" FromRole="SinhVien" ToRole="TaiKhoan" />
-  </EntityType>
-  <EntityType Name="SinhVien_HKSV">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NghienCuuKhoaHocSinhVienId" Type="Int32" Nullable="false" />
-    <Property Name="SinhVienId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="NghienCuuKhoaHocSinhVien" Relationship="BaiTapLonModel.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" FromRole="SinhVien_HKSV" ToRole="NghienCuuKhoaHocSinhVien" />
-    <NavigationProperty Name="SinhVien" Relationship="BaiTapLonModel.FK_SinhVien_HKSV_SinhVien" FromRole="SinhVien_HKSV" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -313,26 +293,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien">
-    <End Type="BaiTapLonModel.NghienCuuKhoaHocSinhVien" Role="NghienCuuKhoaHocSinhVien" Multiplicity="1" />
-    <End Type="BaiTapLonModel.SinhVien_HKSV" Role="SinhVien_HKSV" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NghienCuuKhoaHocSinhVien">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="SinhVien_HKSV">
-        <PropertyRef Name="NghienCuuKhoaHocSinhVienId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_SinhVien_HKSV_SinhVien">
+  <Association Name="FK_NghienCuuKhoaHocSinhVien_SinhVien">
     <End Type="BaiTapLonModel.SinhVien" Role="SinhVien" Multiplicity="1" />
-    <End Type="BaiTapLonModel.SinhVien_HKSV" Role="SinhVien_HKSV" Multiplicity="*" />
+    <End Type="BaiTapLonModel.NghienCuuKhoaHocSinhVien" Role="NghienCuuKhoaHocSinhVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SinhVien">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="SinhVien_HKSV">
+      <Dependent Role="NghienCuuKhoaHocSinhVien">
         <PropertyRef Name="SinhVienId" />
       </Dependent>
     </ReferentialConstraint>

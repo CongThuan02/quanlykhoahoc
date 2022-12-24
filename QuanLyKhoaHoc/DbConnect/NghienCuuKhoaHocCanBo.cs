@@ -18,10 +18,7 @@ namespace QuanLyKhoaHoc.DbConnect
         public string MaDeTai { get; set; }
         public string TenDeTai { get; set; }
         public string MoTa { get; set; }
-        public string FileDinhKem { get; set; }
-        public string GhiChu { get; set; }
         public int GiangVienDangKyId { get; set; }
-        public int TrangThai { get; set; }
     
         public virtual GiangVien GiangVien { get; set; }
     }

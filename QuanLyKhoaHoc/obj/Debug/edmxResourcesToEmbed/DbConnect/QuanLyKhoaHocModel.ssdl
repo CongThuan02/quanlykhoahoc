@@ -55,10 +55,7 @@
     <Property Name="MaDeTai" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="TenDeTai" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="FileDinhKem" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="GhiChu" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="GiangVienDangKyId" Type="int" Nullable="false" />
-    <Property Name="TrangThai" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="NghienCuuKhoaHocSinhVien">
     <Key>
@@ -68,10 +65,8 @@
     <Property Name="MaDeTai" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="TenDeTai" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="255" />
-    <Property Name="FileDinhKem" Type="nvarchar" MaxLength="255" />
-    <Property Name="GhiChu" Type="nvarchar" MaxLength="255" />
     <Property Name="GiangVienHuongDanId" Type="int" Nullable="false" />
-    <Property Name="TrangThai" Type="bit" Nullable="false" />
+    <Property Name="SinhVienId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SinhVien">
     <Key>
@@ -82,14 +77,6 @@
     <Property Name="MaLop" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="TenLop" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="BoMon" Type="nvarchar" MaxLength="100" Nullable="false" />
-  </EntityType>
-  <EntityType Name="SinhVien_HKSV">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NghienCuuKhoaHocSinhVienId" Type="int" Nullable="false" />
-    <Property Name="SinhVienId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -200,26 +187,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien">
-    <End Role="NghienCuuKhoaHocSinhVien" Type="Self.NghienCuuKhoaHocSinhVien" Multiplicity="1" />
-    <End Role="SinhVien_HKSV" Type="Self.SinhVien_HKSV" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NghienCuuKhoaHocSinhVien">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="SinhVien_HKSV">
-        <PropertyRef Name="NghienCuuKhoaHocSinhVienId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_SinhVien_HKSV_SinhVien">
+  <Association Name="FK_NghienCuuKhoaHocSinhVien_SinhVien">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
-    <End Role="SinhVien_HKSV" Type="Self.SinhVien_HKSV" Multiplicity="*" />
+    <End Role="NghienCuuKhoaHocSinhVien" Type="Self.NghienCuuKhoaHocSinhVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SinhVien">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="SinhVien_HKSV">
+      <Dependent Role="NghienCuuKhoaHocSinhVien">
         <PropertyRef Name="SinhVienId" />
       </Dependent>
     </ReferentialConstraint>
@@ -275,7 +250,6 @@
     <EntitySet Name="NghienCuuKhoaHocCanBo" EntityType="Self.NghienCuuKhoaHocCanBo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NghienCuuKhoaHocSinhVien" EntityType="Self.NghienCuuKhoaHocSinhVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SinhVien" EntityType="Self.SinhVien" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="SinhVien_HKSV" EntityType="Self.SinhVien_HKSV" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_BaiBao_TaiKhoan" Association="Self.FK_BaiBao_TaiKhoan">
@@ -306,13 +280,9 @@
       <End Role="GiangVien" EntitySet="GiangVien" />
       <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhVien" />
     </AssociationSet>
-    <AssociationSet Name="FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" Association="Self.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien">
-      <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhVien" />
-      <End Role="SinhVien_HKSV" EntitySet="SinhVien_HKSV" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SinhVien_HKSV_SinhVien" Association="Self.FK_SinhVien_HKSV_SinhVien">
+    <AssociationSet Name="FK_NghienCuuKhoaHocSinhVien_SinhVien" Association="Self.FK_NghienCuuKhoaHocSinhVien_SinhVien">
       <End Role="SinhVien" EntitySet="SinhVien" />
-      <End Role="SinhVien_HKSV" EntitySet="SinhVien_HKSV" />
+      <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhVien" />
     </AssociationSet>
     <AssociationSet Name="FK_SinhVien_TaiKhoan" Association="Self.FK_SinhVien_TaiKhoan">
       <End Role="TaiKhoan" EntitySet="TaiKhoan" />

@@ -18,7 +18,7 @@ namespace QuanLyKhoaHoc.DbConnect
         public SinhVien()
         {
             this.DoAnTotNghieps = new HashSet<DoAnTotNghiep>();
-            this.SinhVien_HKSV = new HashSet<SinhVien_HKSV>();
+            this.NghienCuuKhoaHocSinhViens = new HashSet<NghienCuuKhoaHocSinhVien>();
         }
     
         public int Id { get; set; }
@@ -30,7 +30,7 @@ namespace QuanLyKhoaHoc.DbConnect
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DoAnTotNghiep> DoAnTotNghieps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SinhVien_HKSV> SinhVien_HKSV { get; set; }
+        public virtual ICollection<NghienCuuKhoaHocSinhVien> NghienCuuKhoaHocSinhViens { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }
