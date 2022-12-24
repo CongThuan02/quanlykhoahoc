@@ -41,14 +41,11 @@
     <EntitySetMapping Name="DoAnTotNghieps">
       <EntityTypeMapping TypeName="BaiTapLonModel.DoAnTotNghiep">
         <MappingFragment StoreEntitySet="DoAnTotNghiep">
+          <ScalarProperty Name="SinhVienId" ColumnName="SinhVienId" />
           <ScalarProperty Name="HocKy" ColumnName="HocKy" />
           <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="GiangVienHuongDanId" ColumnName="GiangVienHuongDanId" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-          <ScalarProperty Name="FileDinhKem" ColumnName="FileDinhKem" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-          <ScalarProperty Name="ThoiGianDanKy" ColumnName="ThoiGianDanKy" />
           <ScalarProperty Name="TenDeTai" ColumnName="TenDeTai" />
           <ScalarProperty Name="MaDeTai" ColumnName="MaDeTai" />
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -114,15 +111,6 @@
           <ScalarProperty Name="TenLop" ColumnName="TenLop" />
           <ScalarProperty Name="MaLop" ColumnName="MaLop" />
           <ScalarProperty Name="TaiKhoanId" ColumnName="TaiKhoanId" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SinhVien_DoAnTotNghiep">
-      <EntityTypeMapping TypeName="BaiTapLonModel.SinhVien_DoAnTotNghiep">
-        <MappingFragment StoreEntitySet="SinhVien_DoAnTotNghiep">
-          <ScalarProperty Name="SinhVienId" ColumnName="SinhVienId" />
-          <ScalarProperty Name="DoAnTotNghiepId" ColumnName="DoAnTotNghiepId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

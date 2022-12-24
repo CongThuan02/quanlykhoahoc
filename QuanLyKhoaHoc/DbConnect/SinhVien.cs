@@ -17,7 +17,7 @@ namespace QuanLyKhoaHoc.DbConnect
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SinhVien()
         {
-            this.SinhVien_DoAnTotNghiep = new HashSet<SinhVien_DoAnTotNghiep>();
+            this.DoAnTotNghieps = new HashSet<DoAnTotNghiep>();
             this.SinhVien_HKSV = new HashSet<SinhVien_HKSV>();
         }
     
@@ -28,7 +28,7 @@ namespace QuanLyKhoaHoc.DbConnect
         public string BoMon { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SinhVien_DoAnTotNghiep> SinhVien_DoAnTotNghiep { get; set; }
+        public virtual ICollection<DoAnTotNghiep> DoAnTotNghieps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SinhVien_HKSV> SinhVien_HKSV { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }

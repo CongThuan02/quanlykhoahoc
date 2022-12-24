@@ -34,7 +34,6 @@ namespace QuanLyKhoaHoc.DbConnect
         public virtual DbSet<NghienCuuKhoaHocCanBo> NghienCuuKhoaHocCanBoes { get; set; }
         public virtual DbSet<NghienCuuKhoaHocSinhVien> NghienCuuKhoaHocSinhViens { get; set; }
         public virtual DbSet<SinhVien> SinhViens { get; set; }
-        public virtual DbSet<SinhVien_DoAnTotNghiep> SinhVien_DoAnTotNghiep { get; set; }
         public virtual DbSet<SinhVien_HKSV> SinhVien_HKSV { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }

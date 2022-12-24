@@ -4,27 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="74e18c4759ed4a928e233fc0fe184ee1" Name="Diagram1" ZoomLevel="118">
-        <EntityTypeShape EntityType="BaiTapLonModel.BaiBao" Width="1.5" PointX="3" PointY="8.25" />
-        <EntityTypeShape EntityType="BaiTapLonModel.DoAnTotNghiep" Width="1.5" PointX="5.25" PointY="11.5" />
-        <EntityTypeShape EntityType="BaiTapLonModel.GiangVien" Width="1.5" PointX="3" PointY="15.125" />
-        <EntityTypeShape EntityType="BaiTapLonModel.HoiNghiKhoaHoc" Width="1.5" PointX="3" PointY="1.875" />
-        <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocCanBo" Width="1.5" PointX="5.25" PointY="18.875" />
-        <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocSinhVien" Width="1.5" PointX="5.25" PointY="15.25" />
-        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien" Width="1.5" PointX="3" PointY="4.875" />
-        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien_DoAnTotNghiep" Width="1.5" PointX="7.5" PointY="8.75" />
-        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien_HKSV" Width="1.5" PointX="7.5" PointY="11.625" />
-        <EntityTypeShape EntityType="BaiTapLonModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" />
+      <Diagram DiagramId="74e18c4759ed4a928e233fc0fe184ee1" Name="Diagram1" ZoomLevel="57">
+        <EntityTypeShape EntityType="BaiTapLonModel.BaiBao" Width="1.5" PointX="3" PointY="14" />
+        <EntityTypeShape EntityType="BaiTapLonModel.DoAnTotNghiep" Width="1.5" PointX="5.25" PointY="14.75" />
+        <EntityTypeShape EntityType="BaiTapLonModel.GiangVien" Width="1.5" PointX="3" PointY="8.5" />
+        <EntityTypeShape EntityType="BaiTapLonModel.HoiNghiKhoaHoc" Width="1.5" PointX="3" PointY="3.625" />
+        <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocCanBo" Width="1.5" PointX="5.25" PointY="6.75" />
+        <EntityTypeShape EntityType="BaiTapLonModel.NghienCuuKhoaHocSinhVien" Width="1.5" PointX="5.25" PointY="10.25" />
+        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien" Width="1.5" PointX="3" PointY="17.25" />
+        <EntityTypeShape EntityType="BaiTapLonModel.SinhVien_HKSV" Width="1.5" PointX="7.5" PointY="14.125" />
+        <EntityTypeShape EntityType="BaiTapLonModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="BaiTapLonModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="9.875" />
         <AssociationConnector Association="BaiTapLonModel.FK_BaiBao_TaiKhoan" />
         <AssociationConnector Association="BaiTapLonModel.FK_DoAnTotNghiep_GiangVien" />
-        <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" />
+        <AssociationConnector Association="BaiTapLonModel.FK_DoAnTotNghiep_SinhVien" />
         <AssociationConnector Association="BaiTapLonModel.FK_GiangVien_TaiKhoan" />
         <AssociationConnector Association="BaiTapLonModel.FK_NghienCuuKhoaHocCanBo_GiangVien" />
         <AssociationConnector Association="BaiTapLonModel.FK_NghienCuuKhoaHocSinhVien_GiangVien" />
         <AssociationConnector Association="BaiTapLonModel.FK_HoiNghiKhoaHoc_TaiKhoan" />
         <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" />
-        <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_SinhVien" />
         <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_HKSV_SinhVien" />
         <AssociationConnector Association="BaiTapLonModel.FK_SinhVien_TaiKhoan" />
       </Diagram>
