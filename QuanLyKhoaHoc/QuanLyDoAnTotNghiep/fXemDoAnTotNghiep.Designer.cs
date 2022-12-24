@@ -94,6 +94,7 @@
             this.btnTimKiem.TabIndex = 0;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // button1
             // 
@@ -141,6 +142,7 @@
             this.lsDoAnTotNghiep.TabIndex = 1;
             this.lsDoAnTotNghiep.UseCompatibleStateImageBehavior = false;
             this.lsDoAnTotNghiep.View = System.Windows.Forms.View.Details;
+            this.lsDoAnTotNghiep.SelectedIndexChanged += new System.EventHandler(this.lsDoAnTotNghiep_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -182,11 +184,11 @@
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Học kì";
+            this.columnHeader4.Text = "Năm học";
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Năm học";
+            this.columnHeader5.Text = "Học Kì";
             // 
             // fXemDoAnTotNghiep
             // 

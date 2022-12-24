@@ -49,13 +49,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtMaDeTai = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtHocKy = new System.Windows.Forms.TextBox();
-            this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.txtTenGiangVien = new System.Windows.Forms.TextBox();
             this.txtTenSinhVien = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -68,8 +64,6 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -99,6 +93,7 @@
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -161,13 +156,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtMaDeTai);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtHocKy);
-            this.groupBox1.Controls.Add(this.txtNamHoc);
             this.groupBox1.Controls.Add(this.txtTenGiangVien);
             this.groupBox1.Controls.Add(this.txtTenSinhVien);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
@@ -184,6 +175,7 @@
             this.cbCanBo.Name = "cbCanBo";
             this.cbCanBo.Size = new System.Drawing.Size(180, 21);
             this.cbCanBo.TabIndex = 16;
+            this.cbCanBo.SelectedIndexChanged += new System.EventHandler(this.cbCanBo_SelectedIndexChanged);
             // 
             // cbSinhVien
             // 
@@ -192,6 +184,7 @@
             this.cbSinhVien.Name = "cbSinhVien";
             this.cbSinhVien.Size = new System.Drawing.Size(180, 21);
             this.cbSinhVien.TabIndex = 16;
+            this.cbSinhVien.SelectedIndexChanged += new System.EventHandler(this.cbSinhVien_SelectedIndexChanged);
             // 
             // btnXoa
             // 
@@ -201,6 +194,7 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -210,6 +204,7 @@
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa ";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -219,6 +214,7 @@
             this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label2
             // 
@@ -277,24 +273,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã Giảng viên";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(357, 125);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Học kỳ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(357, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Năm học";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -321,20 +299,6 @@
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "MSV";
-            // 
-            // txtHocKy
-            // 
-            this.txtHocKy.Location = new System.Drawing.Point(437, 122);
-            this.txtHocKy.Name = "txtHocKy";
-            this.txtHocKy.Size = new System.Drawing.Size(180, 20);
-            this.txtHocKy.TabIndex = 15;
-            // 
-            // txtNamHoc
-            // 
-            this.txtNamHoc.Location = new System.Drawing.Point(437, 98);
-            this.txtNamHoc.Name = "txtNamHoc";
-            this.txtNamHoc.Size = new System.Drawing.Size(180, 20);
-            this.txtNamHoc.TabIndex = 15;
             // 
             // txtTenGiangVien
             // 
@@ -376,9 +340,7 @@
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader3});
             this.lsSinhVien.HideSelection = false;
             this.lsSinhVien.Location = new System.Drawing.Point(3, 20);
             this.lsSinhVien.Name = "lsSinhVien";
@@ -386,6 +348,7 @@
             this.lsSinhVien.TabIndex = 0;
             this.lsSinhVien.UseCompatibleStateImageBehavior = false;
             this.lsSinhVien.View = System.Windows.Forms.View.Details;
+            this.lsSinhVien.Click += new System.EventHandler(this.lsSinhVien_Click);
             // 
             // columnHeader1
             // 
@@ -425,14 +388,6 @@
             // 
             this.columnHeader3.Text = "Mô tả";
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Học kì";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Năm học";
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -462,6 +417,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "fQuanLySinhVien";
             this.Text = "fQuanLySinhVien";
+            this.Load += new System.EventHandler(this.fQuanLySinhVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -498,13 +454,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMaDeTai;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtHocKy;
-        private System.Windows.Forms.TextBox txtNamHoc;
         private System.Windows.Forms.TextBox txtTenGiangVien;
         private System.Windows.Forms.TextBox txtTenSinhVien;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -517,8 +469,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
     }

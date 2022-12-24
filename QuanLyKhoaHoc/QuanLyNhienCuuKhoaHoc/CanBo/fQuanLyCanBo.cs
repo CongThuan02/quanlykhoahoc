@@ -190,10 +190,10 @@ namespace QuanLyKhoaHoc.QuanLyNhienCuuKhoaHoc.CanBo
         private void btnXoa_Click(object sender, EventArgs e)
         {
             var maDeTai = lsCanBo.SelectedItems[0].SubItems[3].Text;
-            var xoaDoAnTotNghiep = _context.DoAnTotNghieps.FirstOrDefault(c => c.MaDeTai.Equals(maDeTai));
-            if (xoaDoAnTotNghiep != null)
+            var xoaNhienCuuKhoaHoc = _context.NghienCuuKhoaHocCanBoes.FirstOrDefault(c => c.MaDeTai.Equals(maDeTai));
+            if (xoaNhienCuuKhoaHoc != null)
             {
-                _context.DoAnTotNghieps.Remove(xoaDoAnTotNghiep);
+                _context.NghienCuuKhoaHocCanBoes.Remove(xoaNhienCuuKhoaHoc);
                 _context.SaveChanges();
                 MessageBox.Show("xóa bài báo thành công");
                 fQuanLyCanBo_Load(sender, e);

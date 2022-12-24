@@ -40,9 +40,9 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep
                           tenSv = sinhVien.TaiKhoan.HoTen,
                           maDeTai = doAnTotNghiep.MaDeTai,
                           tenDeTai = doAnTotNghiep.TenDeTai,
-                          namHoc = doAnTotNghiep.NamHoc,
-                          hocKy = doAnTotNghiep.HocKy,
                           moTa = doAnTotNghiep.MoTa,
+                          namHoc = doAnTotNghiep.NamHoc,
+                          hocKy = doAnTotNghiep.HocKy
 
                       };
             var data = await sql.ToListAsync();
@@ -58,9 +58,9 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep
                 deTai.SubItems.Add(item.maSinhVien);
                 deTai.SubItems.Add(item.tenSv);
                 deTai.SubItems.Add(item.moTa);
-                deTai.SubItems.Add(item.hocKy.ToString());
-
                 deTai.SubItems.Add(item.namHoc.ToString());
+                deTai.SubItems.Add(item.hocKy.ToString());
+          
 
                 lsDoAnTotNghiep.Items.Add(deTai);
                 index++;
@@ -78,6 +78,16 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep
             this.Hide();
             back.ShowDialog();  
             
+        }
+
+        private async void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            await loadingdata();
+        }
+
+        private void lsDoAnTotNghiep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -49,7 +49,7 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
 
                       };
             var data = await sql.ToListAsync();
-            lsCanBo.Items.Clear();
+            lsSinhVien.Items.Clear();
             int index = 1;
             foreach (var item in data)
             {
@@ -65,7 +65,7 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
 
                 deTai.SubItems.Add(item.namHoc.ToString());
 
-                lsCanBo.Items.Add(deTai);
+                lsSinhVien.Items.Add(deTai);
                 index++;
             }
         }
@@ -107,7 +107,7 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
         {
             await loadingdata();
             
-            lsCanBo.FullRowSelect = true;
+            lsSinhVien.FullRowSelect = true;
             txtTenGiangVien.Enabled= false;
             txtTenSv.Enabled= false;
             await getListCanBo();
@@ -222,10 +222,10 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
         private async void lsCanBo_Click_1(object sender, EventArgs e)
         {
           
-                if (lsCanBo.SelectedItems.Count == 0)
+                if (lsSinhVien.SelectedItems.Count == 0)
                     return;
 
-                ListViewItem item = lsCanBo.SelectedItems[0];
+                ListViewItem item = lsSinhVien.SelectedItems[0];
 
                 var maGV = item.SubItems[1].Text;
                 var giangVien = await _context.GiangViens.ToListAsync();
@@ -233,11 +233,11 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
                 var maSv = item.SubItems[5].Text;
                 var sinhVien = await _context.SinhViens.ToListAsync();
                 cbSinhVien.SelectedIndex = sinhVien.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maSv));
-                txtMaDeTai.Text = lsCanBo.SelectedItems[0].SubItems[3].Text;
-                txtTenDeTai.Text = lsCanBo.SelectedItems[0].SubItems[4].Text;
-                txtMoTa.Text = lsCanBo.SelectedItems[0].SubItems[7].Text;
-                txtHocKy.Text = lsCanBo.SelectedItems[0].SubItems[8].Text;
-                txtNamHoc.Text = lsCanBo.SelectedItems[0].SubItems[9].Text;
+                txtMaDeTai.Text = lsSinhVien.SelectedItems[0].SubItems[3].Text;
+                txtTenDeTai.Text = lsSinhVien.SelectedItems[0].SubItems[4].Text;
+                txtMoTa.Text = lsSinhVien.SelectedItems[0].SubItems[7].Text;
+                txtHocKy.Text = lsSinhVien.SelectedItems[0].SubItems[8].Text;
+                txtNamHoc.Text = lsSinhVien.SelectedItems[0].SubItems[9].Text;
             
         }
 
@@ -248,7 +248,7 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var maDeTai = lsCanBo.SelectedItems[0].SubItems[3].Text;
+            var maDeTai = lsSinhVien.SelectedItems[0].SubItems[3].Text;
             var xoaDoAnTotNghiep = _context.DoAnTotNghieps.FirstOrDefault(c => c.MaDeTai.Equals(maDeTai));
             if (xoaDoAnTotNghiep != null)
             {

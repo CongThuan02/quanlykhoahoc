@@ -94,7 +94,9 @@ namespace QuanLyKhoaHoc
 
         private void btnDeTaiNhienCuuKhoaHoc_Click(object sender, EventArgs e)
         {
-          
+            fXemNhienCuuKhoaHoc show = new fXemNhienCuuKhoaHoc();
+            this.Hide();
+            show.ShowDialog();
         }
 
         private void btnDanhSachNhienCuuKhoaHocGiaoVien_Click(object sender, EventArgs e)
