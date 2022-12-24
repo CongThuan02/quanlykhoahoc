@@ -15,6 +15,9 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
     public partial class fGiangVienHD : Form
     {
         private readonly QuanLyKhoaHocEntities _context = new QuanLyKhoaHocEntities();
+       
+
+
         public fGiangVienHD()
         {
             InitializeComponent();
@@ -46,7 +49,7 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
 
                       };
             var data = await sql.ToListAsync();
-            lsCanBo.Items.Clear();
+            lsSinhVien.Items.Clear();
             int index = 1;
             foreach (var item in data)
             {
@@ -62,7 +65,7 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
 
                 deTai.SubItems.Add(item.namHoc.ToString());
 
-                lsCanBo.Items.Add(deTai);
+                lsSinhVien.Items.Add(deTai);
                 index++;
             }
         }
@@ -104,7 +107,7 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
         {
             await loadingdata();
             
-            lsCanBo.FullRowSelect = true;
+            lsSinhVien.FullRowSelect = true;
             txtTenGiangVien.Enabled= false;
             txtTenSv.Enabled= false;
             await getListCanBo();
@@ -219,31 +222,45 @@ namespace QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo
         private async void lsCanBo_Click_1(object sender, EventArgs e)
         {
           
-                if (lsCanBo.SelectedItems.Count == 0)
+                if (lsSinhVien.SelectedItems.Count == 0)
                     return;
 
-                ListViewItem item = lsCanBo.SelectedItems[0];
+                ListViewItem item = lsSinhVien.SelectedItems[0];
 
                 var maGV = item.SubItems[1].Text;
-                var giangVien = await _context.TaiKhoans.Where(x => x.MaTaiKhoan.Equals(maGV)).ToListAsync();
-                cbCanBo.SelectedIndex = giangVien.FindIndex(x => x.MaTaiKhoan.Equals(maGV));
-
-                var maSv = item.SubItems[1].Text;
-                var sinhVien = await _context.TaiKhoans.Where(x => x.MaTaiKhoan.Equals(maSv)).ToListAsync();
-                cbSinhVien.SelectedIndex = sinhVien.FindIndex(x => x.MaTaiKhoan.Equals(maSv));
-
-
-                txtMaDeTai.Text = lsCanBo.SelectedItems[0].SubItems[3].Text;
-                txtTenDeTai.Text = lsCanBo.SelectedItems[0].SubItems[4].Text;
-                txtMoTa.Text = lsCanBo.SelectedItems[0].SubItems[7].Text;
-                txtHocKy.Text = lsCanBo.SelectedItems[0].SubItems[8].Text;
-                txtNamHoc.Text = lsCanBo.SelectedItems[0].SubItems[9].Text;
+                var giangVien = await _context.GiangViens.ToListAsync();
+                cbCanBo.SelectedIndex =  giangVien.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maGV));
+                var maSv = item.SubItems[5].Text;
+                var sinhVien = await _context.SinhViens.ToListAsync();
+                cbSinhVien.SelectedIndex = sinhVien.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maSv));
+                txtMaDeTai.Text = lsSinhVien.SelectedItems[0].SubItems[3].Text;
+                txtTenDeTai.Text = lsSinhVien.SelectedItems[0].SubItems[4].Text;
+                txtMoTa.Text = lsSinhVien.SelectedItems[0].SubItems[7].Text;
+                txtHocKy.Text = lsSinhVien.SelectedItems[0].SubItems[8].Text;
+                txtNamHoc.Text = lsSinhVien.SelectedItems[0].SubItems[9].Text;
             
         }
 
         private async void btnTimKiem_Click(object sender, EventArgs e)
         {
             await loadingdata();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            var maDeTai = lsSinhVien.SelectedItems[0].SubItems[3].Text;
+            var xoaDoAnTotNghiep = _context.DoAnTotNghieps.FirstOrDefault(c => c.MaDeTai.Equals(maDeTai));
+            if (xoaDoAnTotNghiep != null)
+            {
+                _context.DoAnTotNghieps.Remove(xoaDoAnTotNghiep);
+                _context.SaveChanges();
+                MessageBox.Show("xóa bài báo thành công");
+                fGiangVienHD_Load(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("bài báo không tồn tại");
+            }
         }
     }
 }

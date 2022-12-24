@@ -208,12 +208,12 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien
             ListViewItem item = lsSinhVien.SelectedItems[0];
 
             var maSV = item.SubItems[1].Text;
-            var sinhviens = await _context.TaiKhoans.Where(x => x.MaTaiKhoan.Equals(maSV)).ToListAsync();
-            cbSinhVien.SelectedIndex = sinhviens.FindIndex(x => x.MaTaiKhoan.Equals(maSV));
+            var sinhviens = await _context.SinhViens.ToListAsync();
+            cbSinhVien.SelectedIndex = sinhviens.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maSV));
             txtMaBaiBao.Text = lsSinhVien.SelectedItems[0].SubItems[3].Text;
             txttenBaiBao.Text = lsSinhVien.SelectedItems[0].SubItems[4].Text;
-            txtMoTa.Text = lsSinhVien.SelectedItems[0].SubItems[5].Text;
-            txtNam.Text = lsSinhVien.SelectedItems[0].SubItems[6].Text;
+            txtNam.Text = lsSinhVien.SelectedItems[0].SubItems[5].Text;
+            txtMoTa.Text = lsSinhVien.SelectedItems[0].SubItems[6].Text;
         }
 
         private async  void btnTimKiem_Click(object sender, EventArgs e)

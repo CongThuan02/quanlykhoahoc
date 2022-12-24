@@ -14,23 +14,14 @@ namespace QuanLyKhoaHoc.DbConnect
     
     public partial class NghienCuuKhoaHocSinhVien
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NghienCuuKhoaHocSinhVien()
-        {
-            this.SinhVien_HKSV = new HashSet<SinhVien_HKSV>();
-        }
-    
         public int Id { get; set; }
         public string MaDeTai { get; set; }
         public string TenDeTai { get; set; }
         public string MoTa { get; set; }
-        public string FileDinhKem { get; set; }
-        public string GhiChu { get; set; }
         public int GiangVienHuongDanId { get; set; }
-        public bool TrangThai { get; set; }
+        public int SinhVienId { get; set; }
     
         public virtual GiangVien GiangVien { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SinhVien_HKSV> SinhVien_HKSV { get; set; }
+        public virtual SinhVien SinhVien { get; set; }
     }
 }

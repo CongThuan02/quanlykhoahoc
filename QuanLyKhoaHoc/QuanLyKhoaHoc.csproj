@@ -128,9 +128,6 @@
     <Compile Include="DbConnect\SinhVien.cs">
       <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbConnect\SinhVien_HKSV.cs">
-      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="DbConnect\sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
     </Compile>
@@ -181,12 +178,7 @@
     <Compile Include="QuanLyNhienCuuKhoaHoc\CanBo\fQuanLyCanBo.Designer.cs">
       <DependentUpon>fQuanLyCanBo.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.Designer.cs">
-      <DependentUpon>fQuanLyNhienCuuKhoaHoc.cs</DependentUpon>
-    </Compile>
+    <Compile Include="QuanLyNhienCuuKhoaHoc\CanBo\NhienCuuKhoaHocCanBo.cs" />
     <Compile Include="QuanLyNhienCuuKhoaHoc\fXemNhienCuuKhoaHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhienCuuKhoaHoc\CanBo\fQuanLyCanBo.resx">
       <DependentUpon>fQuanLyCanBo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyNhienCuuKhoaHoc\fQuanLyNhienCuuKhoaHoc.resx">
-      <DependentUpon>fQuanLyNhienCuuKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhienCuuKhoaHoc\fXemNhienCuuKhoaHoc.resx">
       <DependentUpon>fXemNhienCuuKhoaHoc.cs</DependentUpon>

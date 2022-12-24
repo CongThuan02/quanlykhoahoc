@@ -66,7 +66,7 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lsCanBo = new System.Windows.Forms.ListView();
+            this.lsSinhVien = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -97,6 +97,7 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -399,12 +400,12 @@
             // 
             this.columnHeader1.Text = "STT";
             // 
-            // lsCanBo
+            // lsSinhVien
             // 
-            this.lsCanBo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lsSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsCanBo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsSinhVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader7,
             this.columnHeader8,
@@ -415,14 +416,14 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.lsCanBo.HideSelection = false;
-            this.lsCanBo.Location = new System.Drawing.Point(3, 20);
-            this.lsCanBo.Name = "lsCanBo";
-            this.lsCanBo.Size = new System.Drawing.Size(789, 200);
-            this.lsCanBo.TabIndex = 0;
-            this.lsCanBo.UseCompatibleStateImageBehavior = false;
-            this.lsCanBo.View = System.Windows.Forms.View.Details;
-            this.lsCanBo.Click += new System.EventHandler(this.lsCanBo_Click_1);
+            this.lsSinhVien.HideSelection = false;
+            this.lsSinhVien.Location = new System.Drawing.Point(3, 20);
+            this.lsSinhVien.Name = "lsSinhVien";
+            this.lsSinhVien.Size = new System.Drawing.Size(789, 200);
+            this.lsSinhVien.TabIndex = 0;
+            this.lsSinhVien.UseCompatibleStateImageBehavior = false;
+            this.lsSinhVien.View = System.Windows.Forms.View.Details;
+            this.lsSinhVien.Click += new System.EventHandler(this.lsCanBo_Click_1);
             // 
             // columnHeader3
             // 
@@ -441,7 +442,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.lsCanBo);
+            this.groupBox2.Controls.Add(this.lsSinhVien);
             this.groupBox2.Location = new System.Drawing.Point(1, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(795, 220);
@@ -516,7 +517,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ListView lsCanBo;
+        private System.Windows.Forms.ListView lsSinhVien;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ColumnHeader columnHeader3;

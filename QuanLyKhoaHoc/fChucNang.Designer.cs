@@ -235,6 +235,7 @@
             this.btnDanhSachSinhVienBaoVe.TabIndex = 1;
             this.btnDanhSachSinhVienBaoVe.Text = "Danh sách sinh viên tham gia làm đồ án tốt nghiệp";
             this.btnDanhSachSinhVienBaoVe.UseVisualStyleBackColor = true;
+            this.btnDanhSachSinhVienBaoVe.Click += new System.EventHandler(this.btnDanhSachSinhVienBaoVe_Click);
             // 
             // btnDanhSachGiangVienHuongDan
             // 
@@ -254,6 +255,7 @@
             this.btnXemDanhSachDoAnTotNghiep.TabIndex = 0;
             this.btnXemDanhSachDoAnTotNghiep.Text = "Xem toàn bộ danh sách đồ án tốt nghiệp";
             this.btnXemDanhSachDoAnTotNghiep.UseVisualStyleBackColor = true;
+            this.btnXemDanhSachDoAnTotNghiep.Click += new System.EventHandler(this.btnXemDanhSachDoAnTotNghiep_Click);
             // 
             // label1
             // 
