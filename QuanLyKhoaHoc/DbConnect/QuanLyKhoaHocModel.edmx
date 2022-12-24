@@ -25,10 +25,10 @@
           <Property Name="MaDeTai" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="TenDeTai" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="GhiChu" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="GiangVienHuongDanId" Type="int" Nullable="false" />
           <Property Name="NamHoc" Type="int" Nullable="false" />
           <Property Name="HocKy" Type="int" Nullable="false" />
+          <Property Name="SinhVienId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="GiangVien">
           <Key>
@@ -88,14 +88,6 @@
           <Property Name="TenLop" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="BoMon" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <EntityType Name="SinhVien_DoAnTotNghiep">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DoAnTotNghiepId" Type="int" Nullable="false" />
-          <Property Name="SinhVienId" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="SinhVien_HKSV">
           <Key>
             <PropertyRef Name="Id" />
@@ -153,6 +145,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DoAnTotNghiep_SinhVien">
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
+          <End Role="DoAnTotNghiep" Type="Self.DoAnTotNghiep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SinhVien">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DoAnTotNghiep">
+              <PropertyRef Name="SinhVienId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_GiangVien_TaiKhoan">
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
           <End Role="GiangVien" Type="Self.GiangVien" Multiplicity="*" />
@@ -198,30 +202,6 @@
             </Principal>
             <Dependent Role="NghienCuuKhoaHocSinhVien">
               <PropertyRef Name="GiangVienHuongDanId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep">
-          <End Role="DoAnTotNghiep" Type="Self.DoAnTotNghiep" Multiplicity="1" />
-          <End Role="SinhVien_DoAnTotNghiep" Type="Self.SinhVien_DoAnTotNghiep" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="DoAnTotNghiep">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="SinhVien_DoAnTotNghiep">
-              <PropertyRef Name="DoAnTotNghiepId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SinhVien_DoAnTotNghiep_SinhVien">
-          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
-          <End Role="SinhVien_DoAnTotNghiep" Type="Self.SinhVien_DoAnTotNghiep" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SinhVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="SinhVien_DoAnTotNghiep">
-              <PropertyRef Name="SinhVienId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -300,7 +280,6 @@
           <EntitySet Name="NghienCuuKhoaHocCanBo" EntityType="Self.NghienCuuKhoaHocCanBo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NghienCuuKhoaHocSinhVien" EntityType="Self.NghienCuuKhoaHocSinhVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SinhVien" EntityType="Self.SinhVien" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SinhVien_DoAnTotNghiep" EntityType="Self.SinhVien_DoAnTotNghiep" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SinhVien_HKSV" EntityType="Self.SinhVien_HKSV" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
@@ -310,6 +289,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_DoAnTotNghiep_GiangVien" Association="Self.FK_DoAnTotNghiep_GiangVien">
             <End Role="GiangVien" EntitySet="GiangVien" />
+            <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghiep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DoAnTotNghiep_SinhVien" Association="Self.FK_DoAnTotNghiep_SinhVien">
+            <End Role="SinhVien" EntitySet="SinhVien" />
             <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghiep" />
           </AssociationSet>
           <AssociationSet Name="FK_GiangVien_TaiKhoan" Association="Self.FK_GiangVien_TaiKhoan">
@@ -327,14 +310,6 @@
           <AssociationSet Name="FK_NghienCuuKhoaHocSinhVien_GiangVien" Association="Self.FK_NghienCuuKhoaHocSinhVien_GiangVien">
             <End Role="GiangVien" EntitySet="GiangVien" />
             <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhVien" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" Association="Self.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep">
-            <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghiep" />
-            <End Role="SinhVien_DoAnTotNghiep" EntitySet="SinhVien_DoAnTotNghiep" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SinhVien_DoAnTotNghiep_SinhVien" Association="Self.FK_SinhVien_DoAnTotNghiep_SinhVien">
-            <End Role="SinhVien" EntitySet="SinhVien" />
-            <End Role="SinhVien_DoAnTotNghiep" EntitySet="SinhVien_DoAnTotNghiep" />
           </AssociationSet>
           <AssociationSet Name="FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" Association="Self.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien">
             <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhVien" />
@@ -391,7 +366,6 @@
           <EntitySet Name="NghienCuuKhoaHocCanBoes" EntityType="BaiTapLonModel.NghienCuuKhoaHocCanBo" />
           <EntitySet Name="NghienCuuKhoaHocSinhViens" EntityType="BaiTapLonModel.NghienCuuKhoaHocSinhVien" />
           <EntitySet Name="SinhViens" EntityType="BaiTapLonModel.SinhVien" />
-          <EntitySet Name="SinhVien_DoAnTotNghiep" EntityType="BaiTapLonModel.SinhVien_DoAnTotNghiep" />
           <EntitySet Name="SinhVien_HKSV" EntityType="BaiTapLonModel.SinhVien_HKSV" />
           <EntitySet Name="sysdiagrams" EntityType="BaiTapLonModel.sysdiagram" />
           <EntitySet Name="TaiKhoans" EntityType="BaiTapLonModel.TaiKhoan" />
@@ -403,9 +377,9 @@
             <End Role="GiangVien" EntitySet="GiangViens" />
             <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghieps" />
           </AssociationSet>
-          <AssociationSet Name="FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" Association="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep">
+          <AssociationSet Name="FK_DoAnTotNghiep_SinhVien" Association="BaiTapLonModel.FK_DoAnTotNghiep_SinhVien">
+            <End Role="SinhVien" EntitySet="SinhViens" />
             <End Role="DoAnTotNghiep" EntitySet="DoAnTotNghieps" />
-            <End Role="SinhVien_DoAnTotNghiep" EntitySet="SinhVien_DoAnTotNghiep" />
           </AssociationSet>
           <AssociationSet Name="FK_GiangVien_TaiKhoan" Association="BaiTapLonModel.FK_GiangVien_TaiKhoan">
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
@@ -426,10 +400,6 @@
           <AssociationSet Name="FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien" Association="BaiTapLonModel.FK_SinhVien_HKSV_NghienCuuKhoaHocSinhVien">
             <End Role="NghienCuuKhoaHocSinhVien" EntitySet="NghienCuuKhoaHocSinhViens" />
             <End Role="SinhVien_HKSV" EntitySet="SinhVien_HKSV" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SinhVien_DoAnTotNghiep_SinhVien" Association="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_SinhVien">
-            <End Role="SinhVien" EntitySet="SinhViens" />
-            <End Role="SinhVien_DoAnTotNghiep" EntitySet="SinhVien_DoAnTotNghiep" />
           </AssociationSet>
           <AssociationSet Name="FK_SinhVien_HKSV_SinhVien" Association="BaiTapLonModel.FK_SinhVien_HKSV_SinhVien">
             <End Role="SinhVien" EntitySet="SinhViens" />
@@ -472,12 +442,12 @@
           <Property Name="MaDeTai" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TenDeTai" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="MoTa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="GhiChu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="GiangVienHuongDanId" Type="Int32" Nullable="false" />
           <Property Name="NamHoc" Type="Int32" Nullable="false" />
           <Property Name="HocKy" Type="Int32" Nullable="false" />
+          <Property Name="SinhVienId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="GiangVien" Relationship="BaiTapLonModel.FK_DoAnTotNghiep_GiangVien" FromRole="DoAnTotNghiep" ToRole="GiangVien" />
-          <NavigationProperty Name="SinhVien_DoAnTotNghiep" Relationship="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" FromRole="DoAnTotNghiep" ToRole="SinhVien_DoAnTotNghiep" />
+          <NavigationProperty Name="SinhVien" Relationship="BaiTapLonModel.FK_DoAnTotNghiep_SinhVien" FromRole="DoAnTotNghiep" ToRole="SinhVien" />
         </EntityType>
         <EntityType Name="GiangVien">
           <Key>
@@ -544,19 +514,9 @@
           <Property Name="MaLop" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TenLop" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="BoMon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SinhVien_DoAnTotNghiep" Relationship="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_SinhVien" FromRole="SinhVien" ToRole="SinhVien_DoAnTotNghiep" />
+          <NavigationProperty Name="DoAnTotNghieps" Relationship="BaiTapLonModel.FK_DoAnTotNghiep_SinhVien" FromRole="SinhVien" ToRole="DoAnTotNghiep" />
           <NavigationProperty Name="SinhVien_HKSV" Relationship="BaiTapLonModel.FK_SinhVien_HKSV_SinhVien" FromRole="SinhVien" ToRole="SinhVien_HKSV" />
           <NavigationProperty Name="TaiKhoan" Relationship="BaiTapLonModel.FK_SinhVien_TaiKhoan" FromRole="SinhVien" ToRole="TaiKhoan" />
-        </EntityType>
-        <EntityType Name="SinhVien_DoAnTotNghiep">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DoAnTotNghiepId" Type="Int32" Nullable="false" />
-          <Property Name="SinhVienId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DoAnTotNghiep" Relationship="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep" FromRole="SinhVien_DoAnTotNghiep" ToRole="DoAnTotNghiep" />
-          <NavigationProperty Name="SinhVien" Relationship="BaiTapLonModel.FK_SinhVien_DoAnTotNghiep_SinhVien" FromRole="SinhVien_DoAnTotNghiep" ToRole="SinhVien" />
         </EntityType>
         <EntityType Name="SinhVien_HKSV">
           <Key>
@@ -621,15 +581,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_SinhVien_DoAnTotNghiep_DoAnTotNghiep">
-          <End Type="BaiTapLonModel.DoAnTotNghiep" Role="DoAnTotNghiep" Multiplicity="1" />
-          <End Type="BaiTapLonModel.SinhVien_DoAnTotNghiep" Role="SinhVien_DoAnTotNghiep" Multiplicity="*" />
+        <Association Name="FK_DoAnTotNghiep_SinhVien">
+          <End Type="BaiTapLonModel.SinhVien" Role="SinhVien" Multiplicity="1" />
+          <End Type="BaiTapLonModel.DoAnTotNghiep" Role="DoAnTotNghiep" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="DoAnTotNghiep">
+            <Principal Role="SinhVien">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="SinhVien_DoAnTotNghiep">
-              <PropertyRef Name="DoAnTotNghiepId" />
+            <Dependent Role="DoAnTotNghiep">
+              <PropertyRef Name="SinhVienId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -690,18 +650,6 @@
             </Principal>
             <Dependent Role="SinhVien_HKSV">
               <PropertyRef Name="NghienCuuKhoaHocSinhVienId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SinhVien_DoAnTotNghiep_SinhVien">
-          <End Type="BaiTapLonModel.SinhVien" Role="SinhVien" Multiplicity="1" />
-          <End Type="BaiTapLonModel.SinhVien_DoAnTotNghiep" Role="SinhVien_DoAnTotNghiep" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SinhVien">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="SinhVien_DoAnTotNghiep">
-              <PropertyRef Name="SinhVienId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -775,10 +723,10 @@
           <EntitySetMapping Name="DoAnTotNghieps">
             <EntityTypeMapping TypeName="BaiTapLonModel.DoAnTotNghiep">
               <MappingFragment StoreEntitySet="DoAnTotNghiep">
+                <ScalarProperty Name="SinhVienId" ColumnName="SinhVienId" />
                 <ScalarProperty Name="HocKy" ColumnName="HocKy" />
                 <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
                 <ScalarProperty Name="GiangVienHuongDanId" ColumnName="GiangVienHuongDanId" />
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
                 <ScalarProperty Name="TenDeTai" ColumnName="TenDeTai" />
                 <ScalarProperty Name="MaDeTai" ColumnName="MaDeTai" />
@@ -845,15 +793,6 @@
                 <ScalarProperty Name="TenLop" ColumnName="TenLop" />
                 <ScalarProperty Name="MaLop" ColumnName="MaLop" />
                 <ScalarProperty Name="TaiKhoanId" ColumnName="TaiKhoanId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SinhVien_DoAnTotNghiep">
-            <EntityTypeMapping TypeName="BaiTapLonModel.SinhVien_DoAnTotNghiep">
-              <MappingFragment StoreEntitySet="SinhVien_DoAnTotNghiep">
-                <ScalarProperty Name="SinhVienId" ColumnName="SinhVienId" />
-                <ScalarProperty Name="DoAnTotNghiepId" ColumnName="DoAnTotNghiepId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

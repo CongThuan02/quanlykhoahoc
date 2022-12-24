@@ -244,6 +244,7 @@
             this.btnDanhSachGiangVienHuongDan.TabIndex = 1;
             this.btnDanhSachGiangVienHuongDan.Text = "Danh sách cán bộ, giảng viên hướng dẫn";
             this.btnDanhSachGiangVienHuongDan.UseVisualStyleBackColor = true;
+            this.btnDanhSachGiangVienHuongDan.Click += new System.EventHandler(this.btnDanhSachGiangVienHuongDan_Click);
             // 
             // btnXemDanhSachDoAnTotNghiep
             // 

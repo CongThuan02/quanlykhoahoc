@@ -227,7 +227,7 @@ namespace QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo
             ListViewItem item = lsBaiBaoCanBo.SelectedItems[0];
            
             var maGv = item.SubItems[1].Text;
-            var a= cbGiangVien.SelectedIndex = canBos.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maGv));
+            cbGiangVien.SelectedIndex = canBos.FindIndex(x => x.TaiKhoan.MaTaiKhoan.Equals(maGv));
             txtMaBaiBao.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[3].Text;
             txtTenBaiBao.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[4].Text;
             txtMoTa.Text = lsBaiBaoCanBo.SelectedItems[0].SubItems[5].Text;

@@ -128,9 +128,6 @@
     <Compile Include="DbConnect\SinhVien.cs">
       <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbConnect\SinhVien_DoAnTotNghiep.cs">
-      <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="DbConnect\SinhVien_HKSV.cs">
       <DependentUpon>QuanLyKhoaHocModel.tt</DependentUpon>
     </Compile>

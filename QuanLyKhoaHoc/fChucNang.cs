@@ -1,6 +1,7 @@
 ﻿using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc;
 using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.CanBo;
 using QuanLyKhoaHoc.BaiBaoHoiNghiKhoaHoc.SinhVien;
+using QuanLyKhoaHoc.QuanLyDoAnTotNghiep.CanBo;
 using QuanLyKhoaHoc.BaiBaoTrenTapChi;
 using QuanLyKhoaHoc.BaiBaoTrenTapChi.CanBo;
 using QuanLyKhoaHoc.BaiBaoTrenTapChi.SinhVien;
@@ -108,6 +109,13 @@ namespace QuanLyKhoaHoc
             fQuanLySinhVien _view = new fQuanLySinhVien();
             this.Hide();    
             _view.ShowDialog();
+        }
+
+        private void btnDanhSachGiangVienHuongDan_Click(object sender, EventArgs e)
+        {
+            fGiangVienHD show = new fGiangVienHD();
+            this.Hide();
+            show.ShowDialog();
         }
     }
 }
